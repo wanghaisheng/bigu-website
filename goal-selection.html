@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>选择目标 - 辟谷养生APP</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="screen" id="goal-selection">
+            <div class="header">
+                <button class="icon-button" onclick="window.location.href='register.html'">
+                    <span class="material-icons">arrow_back</span>
+                </button>
+                <div class="header-title">选择目标</div>
+            </div>
+            <div class="full-content">
+                <div class="onboarding-progress">
+                    <div class="progress-step completed">1</div>
+                    <div class="progress-line completed"></div>
+                    <div class="progress-step active">2</div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step">3</div>
+                </div>
+                
+                <h3 style="text-align: center; margin: var(--space-xl) 0 var(--space-lg);">
+                    你希望通过辟谷养生达到什么目标？
+                </h3>
+                <p style="text-align: center; color: var(--text-secondary); margin-bottom: var(--space-xl);">
+                    选择你的主要目标，我们将为你提供个性化的辟谷养生方案
+                </p>
+                
+                <div class="goal-options">
+                    <a href="assessment.html" class="goal-card">
+                        <div class="goal-icon" style="background: var(--goal-body);">
+                            <span class="material-icons">favorite</span>
+                        </div>
+                        <h4>调理身体</h4>
+                        <p>改善亚健康状态，提升机体活力</p>
+                    </a>
+                    <a href="assessment.html" class="goal-card">
+                        <div class="goal-icon" style="background: var(--goal-shape);">
+                            <span class="material-icons">monitor_weight</span>
+                        </div>
+                        <h4>减重塑形</h4>
+                        <p>健康减脂，改善身体曲线</p>
+                    </a>
+                    <a href="assessment.html" class="goal-card">
+                        <div class="goal-icon" style="background: var(--goal-culture);">
+                            <span class="material-icons">wb_sunny</span>
+                        </div>
+                        <h4>文化体验</h4>
+                        <p>体验传统养生文化，寻找内心平静</p>
+                    </a>
+                    <a href="assessment.html" class="goal-card">
+                        <div class="goal-icon" style="background: var(--goal-explore);">
+                            <span class="material-icons">explore</span>
+                        </div>
+                        <h4>健康探索</h4>
+                        <p>尝试新型养生方式，探索健康边界</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
+

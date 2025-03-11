@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页 - 辟谷养生APP</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="screen" id="home">
+            <div class="header">
+                <div class="header-title">减重塑形</div>
+                <div class="header-action">
+                    <button class="icon-button">
+                        <span class="material-icons">notifications</span>
+                    </button>
+                    <button class="icon-button">
+                        <span class="material-icons">person</span>
+                    </button>
+                </div>
+            </div>
+            <div class="content">
+                <div class="body-preview-card">
+                    <div class="card-title">我的身体模型</div>
+                    <div class="body-preview-content">
+                        <div class="body-model">
+                            <svg class="body-silhouette" viewBox="0 0 100 200" xmlns="http://www.w3.org/2000/svg">
+                                <circle class="body-head" cx="50" cy="30" r="20"/>
+                                <rect class="body-torso" x="35" y="50" width="30" height="60" rx="10"/>
+                                <rect class="body-leg" x="35" y="110" width="12" height="70" rx="6"/>
+                                <rect class="body-leg" x="53" y="110" width="12" height="70" rx="6"/>
+                            </svg>
+                        </div>
+                        <div class="body-stats">
+                            <div class="body-slider">
+                                <div class="slider-label">目标进度</div>
+                                <div class="slider-container">
+                                    <input type="range" min="0" max="100" value="45" class="body-range" disabled>
+                                    <div class="slider-labels">
+                                        <span>起点</span>
+                                        <span>目标</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="body-metrics">
+                                <div class="metric">
+                                    <div class="metric-value">25.2</div>
+                                    <div class="metric-label">当前BMI</div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-value">78.5</div>
+                                    <div class="metric-label">体重(kg)</div>
+                                </div>
+                                <div class="metric highlight">
+                                    <div class="metric-value">-3.5</div>
+                                    <div class="metric-label">变化(kg)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="body-actions">
+                        <button class="button outline">
+                            <span class="material-icons button-icon">update</span>
+                            更新数据
+                        </button>
+                        <button class="button primary">
+                            <span class="material-icons button-icon">analytics</span>
+                            详细报告
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="section-title">
+                    <span class="material-icons">calendar_today</span>
+                    我的养生计划
+                </div>
+                
+                <a href="plan-detail.html" class="plan-card">
+                    <div class="plan-header">
+                        <div>
+                            <div class="plan-title">
+                                <span class="material-icons plan-icon">stars</span>
+                                21天减重计划
+                            </div>
+                            <div style="color: var(--text-secondary); font-size: 14px;">
+                                Day 8/21
+                            </div>
+                        </div>
+                        <span class="material-icons" style="color: var(--text-tertiary);">chevron_right</span>
+                    </div>
+                    <div class="plan-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 38%;"></div>
+                        </div>
+                        <div class="progress-text">38% 完成</div>
+                    </div>
+                    <div class="plan-today">
+                        <div class="today-label">今日任务</div>
+                        <div class="today-content">16小时轻断食 + 2L温水 + 15分钟冥想</div>
+                    </div>
+                </a>
+                
+                <div class="section-title">
+                    <span class="material-icons">local_fire_department</span>
+                    活跃挑战
+                </div>
+                
+                <div class="challenge-card">
+                    <div class="challenge-header">
+                        <h3>30天腰围挑战</h3>
+                        <div class="challenge-badge">
+                            <span class="material-icons">trending_up</span>
+                            热门
+                        </div>
+                    </div>
+                    <div class="challenge-info">
+                        <div class="challenge-stat">
+                            <div class="stat-value">152</div>
+                            <div class="stat-label">参与人数</div>
+                        </div>
+                        <div class="challenge-stat">
+                            <div class="stat-value">¥1280</div>
+                            <div class="stat-label">奖金池</div>
+                        </div>
+                        <div class="challenge-stat">
+                            <div class="stat-value">22天</div>
+                            <div class="stat-label">剩余时间</div>
+                        </div>
+                    </div>
+                    <div class="challenge-desc">
+                        参与30天腰围挑战，每日记录饮食与测量数据，达成目标即可瓜分奖金池！
+                    </div>
+                    <button class="button primary full">立即参与</button>
+                </div>
+                
+                <div class="section-title">
+                    <span class="material-icons">restaurant</span>
+                    推荐食谱
+                </div>
+                
+                <div class="recipes-container">
+                    <div class="recipe-card">
+                        <div class="recipe-image" style="background-image: url('https://images.unsplash.com/photo-1600271886742-f049cd451bba?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+                            <div class="recipe-type">早餐</div>
+                        </div>
+                        <div class="recipe-content">
+                            <h4>薏米红豆粥</h4>
+                            <div class="recipe-stats">
+                                <div class="recipe-stat">
+                                    <span class="material-icons">schedule</span>
+                                    15分钟
+                                </div>
+                                <div class="recipe-stat">
+                                    <span class="material-icons">local_fire_department</span>
+                                    120卡
+                                </div>
+                            </div>
+                            <div class="recipe-ingredients">
+                                薏米, 红豆, 枸杞, 冰糖
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="recipe-card">
+                        <div class="recipe-image" style="background-image: url('https://images.unsplash.com/photo-1536304929831-ee1ca9d44906?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+                            <div class="recipe-type">午餐</div>
+                        </div>
+                        <div class="recipe-content">
+                            <h4>藜麦蔬菜沙拉</h4>
+                            <div class="recipe-stats">
+                                <div class="recipe-stat">
+                                    <span class="material-icons">schedule</span>
+                                    20分钟
+                                </div>
+                                <div class="recipe-stat">
+                                    <span class="material-icons">local_fire_department</span>
+                                    180卡
+                                </div>
+                            </div>
+                            <div class="recipe-ingredients">
+                                藜麦, 牛油果, 番茄, 黄瓜
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="recipe-card">
+                        <div class="recipe-image" style="background-image: url('https://images.unsplash.com/photo-1607532941433-304659e8198a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+                            <div class="recipe-type">饮品</div>
+                        </div>
+                        <div class="recipe-content">
+                            <h4>冬瓜薏米水</h4>
+                            <div class="recipe-stats">
+                                <div class="recipe-stat">
+                                    <span class="material-icons">schedule</span>
+                                    30分钟
+                                </div>
+                                <div class="recipe-stat">
+                                    <span class="material-icons">local_fire_department</span>
+                                    45卡
+                                </div>
+                            </div>
+                            <div class="recipe-ingredients">
+                                冬瓜, 薏米, 陈皮, 蜂蜜
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="section-title">
+                    <span class="material-icons">menu_book</span>
+                    养生知识
+                </div>
+                
+                <a href="knowledge-detail.html" class="knowledge-card">
+                    <div class="knowledge-image" style="background-image: url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    <div class="knowledge-content">
+                        <div class="knowledge-category">饮食调理</div>
+                        <h4>断食期间如何应对饥饿感？</h4>
+                        <p style="color: var(--text-secondary); font-size: 14px; margin: var(--space-sm) 0;">
+                            了解断食期间的生理反应，掌握6种有效应对饥饿感的方法...
+                        </p>
+                        <div class="knowledge-meta">
+                            <div class="knowledge-author">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" class="avatar small">
+                                <span>周医师</span>
+                            </div>
+                            <div class="knowledge-stats">
+                                <span class="material-icons">visibility</span>
+                                2.8k
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="nav-bar">
+                <a href="home.html" class="nav-item active">
+                    <span class="material-icons nav-icon">home</span>
+                    <span>首页</span>
+                </a>
+                <a href="tools.html" class="nav-item">
+                    <span class="material-icons nav-icon">hardware</span>
+                    <span>养生工具</span>
+                </a>
+                <a href="products.html" class="nav-item">
+                    <span class="material-icons nav-icon">shopping_bag</span>
+                    <span>辟谷产品</span>
+                </a>
+                <a href="community.html" class="nav-item">
+                    <span class="material-icons nav-icon">forum</span>
+                    <span>社区</span>
+                </a>
+                <a href="knowledge.html" class="nav-item">
+                    <span class="material-icons nav-icon">menu_book</span>
+                    <span>知识库</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
+

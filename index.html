@@ -1,132 +1,1986 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>辟谷养生 - 传统智慧，现代养生</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Landing page specific styles */
+        .landing-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+        
+        .landing-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--space-md) 0;
+            border-bottom: 1px solid var(--border-light);
+        }
+        
+        .landing-logo {
+            font-size: 28px;
+            font-weight: 800;
+        }
+        
+        .landing-nav {
+            display: flex;
+            gap: var(--space-md);
+        }
+        
+        .landing-nav-item {
+            color: var(--text-primary);
+            text-decoration: none;
+            padding: var(--space-sm) var(--space-md);
+            border-radius: var(--radius-full);
+            transition: all 0.2s ease;
+        }
+        
+        .landing-nav-item:hover {
+            background: rgba(255,255,255,0.1);
+        }
+        
+        .hero-section {
+            display: flex;
+            align-items: center;
+            padding: var(--space-xl) 0;
+            gap: var(--space-xl);
+        }
+        
+        .hero-content {
+            flex: 1;
+        }
+        
+        .hero-title {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: var(--space-md);
+            line-height: 1.2;
+        }
+        
+        .hero-subtitle {
+            font-size: 20px;
+            color: var(--text-secondary);
+            margin-bottom: var(--space-lg);
+            line-height: 1.5;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: var(--space-md);
+        }
+        
+        .hero-visual {
+            flex: 1;
+            position: relative;
+        }
+        
+        .hero-image {
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+        }
+        
+        .hero-video {
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+        }
+        
+        .section {
+            padding: var(--space-xl) 0;
+            border-bottom: 1px solid var(--border-light);
+        }
+        
+        .section-title {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: var(--space-md);
+            text-align: center;
+        }
+        
+        .section-subtitle {
+            font-size: 18px;
+            color: var(--text-secondary);
+            margin-bottom: var(--space-xl);
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .problem-solution-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-xl);
+        }
+        
+        .problem-card, .solution-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            border: 1px solid var(--border-light);
+        }
+        
+        .problem-card {
+            border-left: 4px solid var(--neon-pink);
+        }
+        
+        .solution-card {
+            border-left: 4px solid var(--neon-green);
+        }
+        
+        .card-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--space-md);
+        }
+        
+        .problem-icon {
+            background: var(--neon-pink);
+        }
+        
+        .solution-icon {
+            background: var(--neon-green);
+        }
+        
+        .card-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .card-description {
+            color: var(--text-secondary);
+            margin-bottom: var(--space-md);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-lg);
+            margin-bottom: var(--space-xl);
+        }
+        
+        .feature-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            border: 1px solid var(--border-light);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-card);
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: var(--radius-md);
+            background: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--space-md);
+        }
+        
+        .feature-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .feature-description {
+            color: var(--text-secondary);
+            margin-bottom: var(--space-md);
+        }
+        
+        .feature-gif {
+            width: 100%;
+            height: 150px;
+            background: var(--bg-card-hover);
+            border-radius: var(--radius-md);
+            margin-bottom: var(--space-md);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .value-proposition {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto var(--space-xl);
+        }
+        
+        .value-stats {
+            display: flex;
+            justify-content: space-between;
+            gap: var(--space-lg);
+            margin: var(--space-lg) 0;
+        }
+        
+        .value-stat {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: var(--space-xs);
+            background: linear-gradient(to right, var(--neon-pink), var(--primary));
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        
+        .stat-label {
+            color: var(--text-secondary);
+        }
+        
+        .testimonials-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-lg);
+            margin-bottom: var(--space-xl);
+        }
+        
+        .testimonial-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            border: 1px solid var(--border-light);
+        }
+        
+        .testimonial-content {
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-bottom: var(--space-md);
+            position: relative;
+        }
+        
+        .testimonial-content:before {
+            content: '"';
+            font-size: 60px;
+            color: var(--primary);
+            opacity: 0.2;
+            position: absolute;
+            top: -20px;
+            left: -10px;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: var(--radius-full);
+            margin-right: var(--space-md);
+        }
+        
+        .author-info {
+            flex: 1;
+        }
+        
+        .author-name {
+            font-weight: 600;
+        }
+        
+        .author-title {
+            font-size: 14px;
+            color: var(--text-tertiary);
+        }
+        
+        .logos-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: var(--space-lg);
+            margin-bottom: var(--space-xl);
+        }
+        
+        .partner-logo {
+            height: 40px;
+            opacity: 0.7;
+            transition: all 0.2s ease;
+        }
+        
+        .partner-logo:hover {
+            opacity: 1;
+        }
+        
+        .how-it-works {
+            max-width: 800px;
+            margin: 0 auto var(--space-xl);
+        }
+        
+        .steps-container {
+            display: flex;
+            justify-content: space-between;
+            gap: var(--space-lg);
+            margin-bottom: var(--space-xl);
+            position: relative;
+        }
+        
+        .steps-container:before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 60px;
+            right: 60px;
+            height: 4px;
+            background: var(--border-light);
+            z-index: 0;
+        }
+        
+        .step-card {
+            text-align: center;
+            z-index: 1;
+            flex: 1;
+        }
+        
+        .step-number {
+            width: 80px;
+            height: 80px;
+            border-radius: var(--radius-full);
+            background: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            font-weight: 700;
+            margin: 0 auto var(--space-md);
+        }
+        
+        .step-title {
+            font-weight: 600;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .step-description {
+            color: var(--text-secondary);
+        }
+        
+        .app-screenshots {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-md);
+            margin-bottom: var(--space-xl);
+        }
+        
+        .app-screenshot {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-light);
+            height: 600px;
+        }
+        
+        .screenshot-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .screenshot-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: var(--space-md);
+            background: rgba(30, 30, 30, 0.8);
+            text-align: center;
+            font-size: 14px;
+        }
+        
+        .pricing-container {
+            display: flex;
+            gap: var(--space-lg);
+            justify-content: center;
+            margin-bottom: var(--space-xl);
+        }
+        
+        .pricing-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            border: 1px solid var(--border-light);
+            width: 300px;
+            transition: all 0.3s ease;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-card);
+        }
+        
+        .pricing-card.popular {
+            border: 2px solid var(--primary);
+            position: relative;
+        }
+        
+        .popular-badge {
+            position: absolute;
+            top: -15px;
+            right: 20px;
+            background: var(--primary);
+            color: white;
+            padding: var(--space-xs) var(--space-sm);
+            border-radius: var(--radius-full);
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .pricing-title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: var(--space-md);
+        }
+        
+        .pricing-price {
+            text-align: center;
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: var(--space-md);
+            color: var(--neon-pink);
+        }
+        
+        .pricing-period {
+            font-size: 14px;
+            color: var(--text-tertiary);
+        }
+        
+        .pricing-features {
+            margin-bottom: var(--space-lg);
+        }
+        
+        .pricing-feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .pricing-feature .material-icons {
+            color: var(--neon-green);
+            margin-right: var(--space-sm);
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto var(--space-xl);
+        }
+        
+        .faq-item {
+            margin-bottom: var(--space-md);
+            border-bottom: 1px solid var(--border-light);
+            padding-bottom: var(--space-md);
+        }
+        
+        .faq-question {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: var(--space-sm);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            color: var(--text-secondary);
+            padding-top: var(--space-sm);
+        }
+        
+        .waitlist-container {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            margin-bottom: var(--space-xl);
+            text-align: center;
+            border: 1px solid var(--border-light);
+        }
+        
+        .waitlist-form {
+            display: flex;
+            max-width: 500px;
+            margin: var(--space-lg) auto 0;
+        }
+        
+        .waitlist-input {
+            flex: 1;
+            padding: var(--space-md);
+            background: var(--bg-dark);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-full) 0 0 var(--radius-full);
+            color: var(--text-primary);
+            font-size: 16px;
+        }
+        
+        .waitlist-input:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        
+        .waitlist-button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 0 var(--space-lg);
+            border-radius: 0 var(--radius-full) var(--radius-full) 0;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .waitlist-button:hover {
+            background: var(--primary-dark);
+        }
+        
+        .video-container, .twitter-container {
+            margin-bottom: var(--space-xl);
+        }
+        
+        .videos-grid, .tweets-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-lg);
+        }
+        
+        .video-card, .tweet-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--border-light);
+        }
+        
+        .video-iframe {
+            width: 100%;
+            height: 250px;
+            border: none;
+        }
+        
+        .video-info, .tweet-info {
+            padding: var(--space-md);
+        }
+        
+        .video-title, .tweet-author {
+            font-weight: 600;
+            margin-bottom: var(--space-xs);
+        }
+        
+        .video-channel, .tweet-date {
+            font-size: 14px;
+            color: var(--text-tertiary);
+        }
+        
+        .tweet-content {
+            color: var(--text-secondary);
+            margin: var(--space-sm) 0;
+        }
+        
+        .tweet-stats {
+            display: flex;
+            gap: var(--space-md);
+            font-size: 14px;
+            color: var(--text-tertiary);
+        }
+        
+        .tweet-stat {
+            display: flex;
+            align-items: center;
+        }
+        
+        .tweet-stat .material-icons {
+            font-size: 16px;
+            margin-right: 4px;
+        }
+        
+        .landing-footer {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: var(--space-xl);
+            padding: var(--space-xl) 0;
+            border-top: 1px solid var(--border-light);
+        }
+        
+        .footer-company {
+            max-width: 300px;
+        }
+        
+        .footer-logo {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: var(--space-md);
+        }
+        
+        .footer-description {
+            color: var(--text-secondary);
+            margin-bottom: var(--space-md);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: var(--space-sm);
+        }
+        
+        .social-link {
+            width: 36px;
+            height: 36px;
+            border-radius: var(--radius-full);
+            background: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-primary);
+            transition: all 0.2s ease;
+        }
+        
+        .social-link:hover {
+            background: var(--primary);
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-sm);
+        }
+        
+        .footer-title {
+            font-weight: 600;
+            margin-bottom: var(--space-md);
+        }
+        
+        .footer-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        
+        .footer-link:hover {
+            color: var(--primary);
+        }
+        
+        .language-selector {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            color: var(--text-secondary);
+            cursor: pointer;
+            margin-top: var(--space-md);
+        }
+        
+        .language-selector select {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            color: var(--text-primary);
+            padding: var(--space-xs) var(--space-sm);
+            border-radius: var(--radius-sm);
+        }
+        
+        .copyright {
+            grid-column: 1 / -1;
+            margin-top: var(--space-lg);
+            color: var(--text-tertiary);
+            font-size: 14px;
+        }
+        
+        @media (max-width: 900px) {
+            .hero-section {
+                flex-direction: column;
+            }
+            
+            .problem-solution-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .testimonials-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .app-screenshots {
+                grid-template-columns: 1fr;
+            }
+            
+            .pricing-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .videos-grid, .tweets-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .landing-footer {
+                grid-template-columns: 1fr;
+                gap: var(--space-lg);
+            }
+        }
 
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="A mobile simulator designed to demonstrate mobile interface design.">
-  <meta name="keywords" content="mobile, simulator, mobile design, mobile app">
-  <meta name="author" content="Your Name or Company">
-  <meta http-equiv="Content-Language" content="en">
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
 
-  <!-- Canonical Link -->
-  <link rel="canonical" href="https://www.yourwebsite.com/pc-simulator" />
+        .animate {
+            animation: fadeIn 0.8s ease forwards;
+            opacity: 0;
+        }
 
-  <!-- Open Graph for Social Media -->
-  <meta property="og:title" content="PC Simulator">
-  <meta property="og:description" content="A mobile simulator designed to demonstrate mobile interface design.">
-  <meta property="og:image" content="https://www.yourwebsite.com/pc-simulator-image.jpg">
-  <meta property="og:url" content="https://www.yourwebsite.com/pc-simulator">
-  <meta property="og:type" content="website">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="PC Simulator">
-  <meta name="twitter:description" content="A mobile simulator designed to demonstrate mobile interface design.">
-  <meta name="twitter:image" content="https://www.yourwebsite.com/pc-simulator-image.jpg">
-  <meta name="twitter:creator" content="@yourtwitterhandle">
-
-  <!-- Favicon -->
-  <link rel="icon" href="https://www.yourwebsite.com/favicon.ico" type="image/x-icon">
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-Y"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-    gtag('config', 'UA-XXXXX-Y');
-  </script>
-
-  <!-- Microsoft Clarity -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y) {
-      window.clarity=window.clarity||function(){(clarity.q=clarity.q||[]).push(arguments)};
-      clarity('set', 'anonymizeIP', true);
-      i=l.createElement('script');i.async=1;i.src=r;i.type='text/javascript';
-      t=l.getElementsByTagName('script')[0];t.parentNode.insertBefore(i,t);
-    })(document,window,'script','https://www.clarity.ms/tag/XXXXXX');
-  </script>
-
-  <title>PC Simulator</title>
-
-  <style>
-    /* Global Styles */
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
-    }
-
-    .mobile-container {
-      width: 360px;
-      height: 640px;
-      border: 16px solid black;
-      border-radius: 16px;
-      background-color: #fff;
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .content {
-      font-size: 1.2rem;
-      color: #333;
-    }
-
-    /* Adjustments for PC */
-    @media (min-width: 768px) {
-      .mobile-container {
-        width: 600px;
-        height: 1000px;
-      }
-
-      .content {
-        font-size: 1.5rem;
-      }
-    }
-
-    @media (min-width: 1024px) {
-      .mobile-container {
-        width: 800px;
-        height: 1400px;
-      }
-
-      .content {
-        font-size: 1.8rem;
-      }
-    }
-
-    /* Additional responsiveness for larger screens */
-    @media (min-width: 1200px) {
-      body {
-        justify-content: flex-start;
-      }
-
-      .mobile-container {
-        margin-top: 50px;
-      }
-    }
-  </style>
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        
+        /* Benefits Section */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-lg);
+            margin-bottom: var(--space-xl);
+        }
+        
+        .benefit-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            border: 1px solid var(--border-light);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-card);
+            border-color: var(--primary);
+        }
+        
+        .benefit-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: var(--radius-full);
+            background: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--space-md);
+        }
+        
+        .benefit-icon .material-icons {
+            font-size: 30px;
+            color: white;
+        }
+        
+        .benefit-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .benefit-desc {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+        
+        /* Expert Team */
+        .experts-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-lg);
+            margin-bottom: var(--space-xl);
+        }
+        
+        .expert-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            border: 1px solid var(--border-light);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .expert-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-card);
+            border-color: var(--primary);
+        }
+        
+        .expert-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: var(--radius-full);
+            margin: 0 auto var(--space-md);
+            object-fit: cover;
+        }
+        
+        .expert-name {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: var(--space-xs);
+        }
+        
+        .expert-title {
+            color: var(--primary);
+            font-size: 14px;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .expert-desc {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+        
+        /* Results Section */
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-lg);
+            margin-bottom: var(--space-xl);
+        }
+        
+        .result-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            border: 1px solid var(--border-light);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .result-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-card);
+            border-color: var(--primary);
+        }
+        
+        .result-stat {
+            font-size: 36px;
+            font-weight: 700;
+            background: linear-gradient(to right, var(--neon-pink), var(--primary));
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: var(--space-xs);
+        }
+        
+        .result-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: var(--space-md);
+        }
+        
+        .result-body {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+        
+        /* Media Section */
+        .media-slider {
+            display: flex;
+            gap: var(--space-lg);
+            margin-bottom: var(--space-xl);
+            overflow-x: auto;
+            padding-bottom: var(--space-md);
+            scrollbar-width: none;
+        }
+        
+        .media-slider::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .media-quote {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            border: 1px solid var(--border-light);
+            min-width: 300px;
+            position: relative;
+        }
+        
+        .quote-symbol {
+            font-size: 60px;
+            position: absolute;
+            top: -20px;
+            left: 10px;
+            color: var(--primary);
+            opacity: 0.2;
+        }
+        
+        .quote-content {
+            font-style: italic;
+            margin-bottom: var(--space-md);
+            color: var(--text-secondary);
+            z-index: 1;
+            position: relative;
+        }
+        
+        .quote-source {
+            font-weight: 600;
+            text-align: right;
+            color: var(--neon-pink);
+        }
+        
+        .media-logos {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: var(--space-md);
+        }
+        
+        .media-logo {
+            opacity: 0.6;
+            transition: all 0.2s ease;
+        }
+        
+        .media-logo:hover {
+            opacity: 1;
+        }
+        
+        /* Comparison Section */
+        .comparison-table {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--border-light);
+            margin-bottom: var(--space-xl);
+        }
+        
+        .comparison-header {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            padding: var(--space-md);
+            background: rgba(140, 82, 255, 0.1);
+            font-weight: 600;
+        }
+        
+        .comparison-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            padding: var(--space-md);
+            border-top: 1px solid var(--border-light);
+        }
+        
+        .comparison-feature {
+            font-weight: 500;
+        }
+        
+        .comparison-us {
+            color: var(--neon-green);
+        }
+        
+        .comparison-others {
+            color: var(--text-secondary);
+        }
+        
+        .comparison-row .material-icons {
+            font-size: 18px;
+            vertical-align: middle;
+            margin-right: var(--space-xs);
+        }
+        
+        .comparison-row .check {
+            color: var(--neon-green);
+        }
+        
+        .comparison-row .partial {
+            color: var(--neon-yellow);
+        }
+        
+        .comparison-row .no {
+            color: var(--neon-pink);
+        }
+        
+        /* Guarantee Section */
+        .guarantees-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-lg);
+            margin-bottom: var(--space-xl);
+        }
+        
+        .guarantee-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            border: 1px solid var(--border-light);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .guarantee-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-card);
+            border-color: var(--primary);
+        }
+        
+        .guarantee-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: var(--radius-full);
+            background: var(--neon-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--space-md);
+        }
+        
+        .guarantee-icon .material-icons {
+            font-size: 30px;
+            color: white;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 900px) {
+            .benefits-grid, 
+            .experts-grid, 
+            .results-grid, 
+            .guarantees-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .comparison-header, 
+            .comparison-row {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .comparison-feature, 
+            .comparison-us, 
+            .comparison-others {
+                padding: var(--space-sm) 0;
+            }
+        }
+    </style>
 </head>
-
 <body>
-  <div class="mobile-container">
-    <div class="content">
-      <p>Mobile Simulator Screen</p>
-      <p>PC Version: Adjusted for larger screens.</p>
+    <div class="landing-container">
+        <header class="landing-header">
+            <div class="landing-logo">
+                <span class="gradient-text">辟谷养生</span>
+            </div>
+            <nav class="landing-nav">
+                <a href="#features" class="landing-nav-item">功能</a>
+                <a href="#how-it-works" class="landing-nav-item">使用流程</a>
+                <a href="#pricing" class="landing-nav-item">价格</a>
+                <a href="#faq" class="landing-nav-item">常见问题</a>
+                <a href="login.html" class="button outline">登录</a>
+            </nav>
+        </header>
+        
+        <section class="hero-section">
+            <div class="hero-content animate">
+                <h1 class="hero-title">告别养生迷茫，实现健康自由 — 辟谷养生助您轻松实现目标！</h1>
+                <p class="hero-subtitle">结合传统智慧与现代科技，为您提供个性化的辟谷养生方案，让养生变得轻松、高效且科学。无论您是想减重塑形、调理身体，还是体验传统文化，辟谷养生都能满足您的需求。</p>
+                <div class="hero-cta">
+                    <a href="register.html" class="button primary">
+                        <span class="material-icons button-icon">star</span>
+                        开启您的养生之旅
+                    </a>
+                    <a href="#waitlist" class="button outline">
+                        <span class="material-icons button-icon">mail</span>
+                        加入等待列表
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual animate delay-1">
+                <video class="hero-video" autoplay loop muted playsinline>
+                    <source src="https://player.vimeo.com/external/367890617.sd.mp4?s=1c24483f70e95b98b42256d31631464cb5b80f3c" type="video/mp4">
+                </video>
+            </div>
+        </section>
+        
+        <section id="problem-solution" class="section">
+            <h2 class="section-title animate">还在为健康管理困扰？你不是一个人！</h2>
+            <p class="section-subtitle animate delay-1">传统养生方法缺乏科学引导，盲目尝试不仅浪费时间，更可能危害健康。辟谷养生为您提供一站式解决方案，让养生变得简单而科学。</p>
+            
+            <div class="problem-solution-grid">
+                <div class="problem-card animate delay-2">
+                    <div class="card-icon problem-icon">
+                        <span class="material-icons">sentiment_very_dissatisfied</span>
+                    </div>
+                    <h3 class="card-title">健康困扰</h3>
+                    <p class="card-description">亚健康状态让您疲惫不堪、精力不足，常规方法见效慢且难以坚持。盲目跟风的"养生法"缺乏科学指导，甚至可能带来健康风险。</p>
+                    <div class="card-features">
+                        <div class="card-feature">❌ 养生信息鱼龙混杂，难辨真伪</div>
+                        <div class="card-feature">❌ 缺乏专业指导，盲目尝试有风险</div>
+                        <div class="card-feature">❌ 没有个性化方案，效果大打折扣</div>
+                    </div>
+                </div>
+                
+                <div class="solution-card animate delay-3">
+                    <div class="card-icon solution-icon">
+                        <span class="material-icons">sentiment_very_satisfied</span>
+                    </div>
+                    <h3 class="card-title">辟谷养生解决方案</h3>
+                    <p class="card-description">辟谷养生APP为您提供科学、系统的辟谷养生方案，结合传统智慧与现代科技，让您安全高效地实现健康目标。</p>
+                    <div class="card-features">
+                        <div class="card-feature">✅ 权威专家团队提供科学指导</div>
+                        <div class="card-feature">✅ 个性化方案定制，针对您的具体需求</div>
+                        <div class="card-feature">✅ 全程监测与调整，确保安全有效</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="features" class="section">
+            <h2 class="section-title animate">辟谷养生，四大核心功能让您轻松实现健康目标</h2>
+            <p class="section-subtitle animate delay-1">以专业科学的方法，帮助您安全辟谷、调理身体、减重塑形、体验传统文化</p>
+            
+            <div class="features-grid">
+                <div class="feature-card animate delay-1">
+                    <div class="feature-gif">
+                        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3g5djB1bzloMzdrMno1bjZtdWdlbWVxajJ0dnNkejk4cWMzZnFpMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l46Cy1rHbQ92uuLXa/giphy.gif" alt="个性化辟谷方案" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+                    <div class="feature-icon">
+                        <span class="material-icons">person</span>
+                    </div>
+                    <h3 class="feature-title">场景一：个性化辟谷方案 - 量身定制，科学安全</h3>
+                    <p class="feature-description">基于您的身体状况、健康目标和生活习惯，智能算法为您生成完全个性化的辟谷方案，确保安全高效。</p>
+                    <a href="#" class="text-button">了解更多 ></a>
+                </div>
+                
+                <div class="feature-card animate delay-2">
+                    <div class="feature-gif">
+                        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2RwbTcyZzZmOW4wN25rZDg0aWh3cGx5NTdtdGRzajM0MTIwdGk1diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT9IgwHGjkSrTj8QQE/giphy.gif" alt="全程健康监测" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+                    <div class="feature-icon" style="background: var(--neon-pink);">
+                        <span class="material-icons">monitoring</span>
+                    </div>
+                    <h3 class="feature-title">场景二：全程健康监测 - 实时跟踪，及时调整</h3>
+                    <p class="feature-description">辟谷全程监测身体变化，智能预警系统及时发现潜在风险，确保您的辟谷过程安全可控。</p>
+                    <a href="#" class="text-button">了解更多 ></a>
+                </div>
+                
+                <div class="feature-card animate delay-3">
+                    <div class="feature-gif">
+                        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcWJ1bzQyYWl0eWF1cDk1b3BxaHpucHJzbW0wYWgyeWE5dDRvZXZvdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o7TKHairvTTlaJE0o/giphy.gif" alt="专家社区支持" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+                    <div class="feature-icon" style="background: var(--neon-blue);">
+                        <span class="material-icons">groups</span>
+                    </div>
+                    <h3 class="feature-title">场景三：专家社区支持 - 权威指导，互助成长</h3>
+                    <p class="feature-description">权威养生专家提供专业指导，志同道合的用户互相分享经验，让您的养生之旅不再孤单。</p>
+                    <a href="#" class="text-button">了解更多 ></a>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <a href="register.html" class="button primary">
+                    <span class="material-icons button-icon">visibility</span>
+                    探索全部功能
+                </a>
+            </div>
+        </section>
+        
+        <section id="value" class="section">
+            <div class="value-proposition animate">
+                <h2 class="section-title">辟谷养生 - 您的专属健康管理助手！</h2>
+                <p class="section-subtitle">我们致力于帮助用户在传统养生领域实现显著提升，让您的健康之路更轻松、高效且科学。</p>
+                
+                <div class="value-stats">
+                    <div class="value-stat">
+                        <div class="stat-value">300%</div>
+                        <div class="stat-label">养生效率提升</div>
+                    </div>
+                    <div class="value-stat">
+                        <div class="stat-value">92%</div>
+                        <div class="stat-label">用户达成目标</div>
+                    </div>
+                    <div class="value-stat">
+                        <div class="stat-value">50%</div>
+                        <div class="stat-label">时间节省</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="testimonials" class="section">
+            <h2 class="section-title animate">超过10,000名用户的共同选择！</h2>
+            <p class="section-subtitle animate delay-1">听听他们怎么说</p>
+            
+            <div class="testimonials-container">
+                <div class="testimonial-card animate delay-1">
+                    <div class="testimonial-content">
+                        辟谷养生APP彻底改变了我对养生的理解。在专业指导下，我完成了21天的调理计划，不仅体重下降了5公斤，更重要的是精力充沛，皮肤状态也明显改善。这款APP让养生变得既科学又简单！
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/33.jpg" class="author-avatar">
+                        <div class="author-info">
+                            <div class="author-name">李小明</div>
+                            <div class="author-title">公司职员，32岁</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card animate delay-2">
+                    <div class="testimonial-content">
+                        作为一名中医师，我非常认可辟谷养生APP的专业性。它成功地将传统中医理论与现代科技相结合，提供的方案既尊重传统智慧，又有科学依据。我经常向患者推荐这款APP。
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/54.jpg" class="author-avatar">
+                        <div class="author-info">
+                            <div class="author-name">张教授</div>
+                            <div class="author-title">中医师，45岁</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card animate delay-3">
+                    <div class="testimonial-content">
+                        我使用辟谷养生已经半年了，最喜欢的是它的个性化指导和社区支持。每当我遇到困难想放弃时，APP会及时调整方案，社区里的伙伴们也会给予鼓励。现在我已经养成了健康的生活习惯，感谢辟谷养生！
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" class="author-avatar">
+                        <div class="author-info">
+                            <div class="author-name">王女士</div>
+                            <div class="author-title">自由职业者，38岁</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="logos-container animate delay-3">
+                <div class="partner-logo">
+                    <svg width="120" height="40" viewBox="0 0 120 40" fill="white">
+                        <rect x="10" y="10" width="100" height="20" rx="4" fill="none" stroke="white"/>
+                        <text x="20" y="25" fill="white" font-family="Arial" font-size="12">中国养生协会</text>
+                    </svg>
+                </div>
+                <div class="partner-logo">
+                    <svg width="120" height="40" viewBox="0 0 120 40" fill="white">
+                        <rect x="10" y="10" width="100" height="20" rx="4" fill="none" stroke="white"/>
+                        <text x="20" y="25" fill="white" font-family="Arial" font-size="12">健康时报</text>
+                    </svg>
+                </div>
+                <div class="partner-logo">
+                    <svg width="120" height="40" viewBox="0 0 120 40" fill="white">
+                        <rect x="10" y="10" width="100" height="20" rx="4" fill="none" stroke="white"/>
+                        <text x="20" y="25" fill="white" font-family="Arial" font-size="12">养生堂</text>
+                    </svg>
+                </div>
+                <div class="partner-logo">
+                    <svg width="120" height="40" viewBox="0 0 120 40" fill="white">
+                        <rect x="10" y="10" width="100" height="20" rx="4" fill="none" stroke="white"/>
+                        <text x="20" y="25" fill="white" font-family="Arial" font-size="12">国家健康研究所</text>
+                    </svg>
+                </div>
+            </div>
+        </section>
+        
+        <section id="how-it-works" class="section">
+            <h2 class="section-title animate">简单易用，三步上手！</h2>
+            <p class="section-subtitle animate delay-1">辟谷养生APP设计简洁直观，让您轻松开启养生之旅</p>
+            
+            <div class="how-it-works">
+                <div class="steps-container">
+                    <div class="step-card animate delay-1">
+                        <div class="step-number">1</div>
+                        <h3 class="step-title">设定目标</h3>
+                        <p class="step-description">选择您的养生目标，如减重塑形、调理身体或文化体验</p>
+                    </div>
+                    
+                    <div class="step-card animate delay-2">
+                        <div class="step-number">2</div>
+                        <h3 class="step-title">获取方案</h3>
+                        <p class="step-description">完成健康评估，获取专属辟谷养生方案</p>
+                    </div>
+                    
+                    <div class="step-card animate delay-3">
+                        <div class="step-number">3</div>
+                        <h3 class="step-title">开始执行</h3>
+                        <p class="step-description">按照指导执行方案，实时监测，享受成果</p>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <a href="register.html" class="button primary">
+                        <span class="material-icons button-icon">play_arrow</span>
+                        立即开始您的养生之旅
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <section id="screenshots" class="section">
+            <h2 class="section-title animate">抢先预览 - 辟谷养生APP核心功能一览</h2>
+            <p class="section-subtitle animate delay-1">滑动浏览，发现辟谷养生APP如何帮助您实现健康目标</p>
+            
+            <div class="app-screenshots">
+                <div class="app-screenshot animate delay-1">
+                    <iframe src="home.html" class="screenshot-iframe"></iframe>
+                    <div class="screenshot-caption">个性化首页</div>
+                </div>
+                
+                <div class="app-screenshot animate delay-2">
+                    <iframe src="plan-detail.html" class="screenshot-iframe"></iframe>
+                    <div class="screenshot-caption">辟谷计划详情</div>
+                </div>
+                
+                <div class="app-screenshot animate delay-3">
+                    <iframe src="ai-chat.html" class="screenshot-iframe"></iframe>
+                    <div class="screenshot-caption">AI养生顾问</div>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <a href="home.html" class="button primary" target="_blank">
+                    <span class="material-icons button-icon">fullscreen</span>
+                    体验完整App Demo
+                </a>
+            </div>
+        </section>
+        
+        <section id="pricing" class="section">
+            <h2 class="section-title animate">超值定价，养生功能触手可及！</h2>
+            <p class="section-subtitle animate delay-1">多种灵活套餐，满足不同需求，总有一款适合您！立即选择最适合您的套餐，开启健康提升之旅！</p>
+            
+            <div class="pricing-container">
+                <div class="pricing-card animate delay-1">
+                    <div class="pricing-title">基础版</div>
+                    <div class="pricing-price">¥29<span class="pricing-period">/月</span></div>
+                    <div class="pricing-features">
+                        <div class="pricing-feature">
+                            <span class="material-icons">check_circle</span>
+                            个性化辟谷方案
+                        </div>
+                        <div class="pricing-feature">
+                            <span class="material-icons">check_circle</span>
+                            基础健康监测
+                        </div>
+                        <div class="pricing-feature">
+                            <span class="material-icons">check_circle</span>
+                            社区交流
+                        </div>
+                    </div>
+                    <a href="register.html" class="button outline full">选择基础版</a>
+                </div>
+                
+                <div class="pricing-card popular animate delay-2">
+                    <div class="popular-badge">最受欢迎</div>
+                    <div class="pricing-title">专业版</div>
+                    <div class="pricing-price">¥79<span class="pricing-period">/月</span></div>
+                    <div class="pricing-features">
+                        <div class="pricing-feature">
+                            <span class="material-icons">check_circle</span>
+                            高级个性化辟谷方案
+                        </div>
+                        <div class="pricing-feature">
+                            <span class="material-icons">check_circle</span>
+                            全面健康监测
+                        </div>
+                        <div class="pricing-feature">
+                            <span class="material-icons">check_circle</span>
+                            专家一对一指导
+                        </div>
+                        <div class="pricing-feature">
+                            <span class="material-icons">check_circle</span>
+                            AI养生顾问无限使用
+                        </div>
+                    </div>
+                    <a href="register.html" class="button primary full">选择专业版</a>
+                </div>
+                
+                <div class="pricing-card animate delay-3">
+                    <div class="pricing-title">尊享版</div>
+                    <div class="pricing-price">¥199<span class="pricing-period">/月</span></div>
+                    <div class="pricing-features">
+                        <div class="pricing-feature">
+                            <span class="material-icons">check_circle</span>
+                            专业版全部功能
+                        </div>
+                        <div class="pricing-feature">
+                            <span class="material-icons">check_circle</span>
+                            专属定制养生产品
+                        </div>
+                        <div class="pricing-feature">
+                            <span class="material-icons">check_circle</span>
+                            线下养生活动优先参与
+                        </div>
+                        <div class="pricing-feature">
+                            <span class="material-icons">check_circle</span>
+                            24小时专家热线
+                        </div>
+                    </div>
+                    <a href="register.html" class="button outline full">选择尊享版</a>
+                </div>
+            </div>
+        </section>
+        
+        <section id="faq" class="section">
+            <h2 class="section-title animate">常见问题</h2>
+            <p class="section-subtitle animate delay-1">我们整理了用户最关心的问题，帮助您更好地了解辟谷养生APP</p>
+            
+            <div class="faq-container">
+                <div class="faq-item animate delay-1">
+                    <div class="faq-question">
+                        <span>辟谷养生APP如何帮我实现健康目标？</span>
+                        <span class="material-icons">add</span>
+                    </div>
+                    <div class="faq-answer">
+                        辟谷养生APP通过科学的评估系统了解您的身体状况和需求，结合传统中医理论和现代营养学，为您定制个性化的辟谷养生方案。APP全程提供专业指导和监测，确保您安全高效地达成健康目标。
+                    </div>
+                </div>
+                
+                <div class="faq-item animate delay-2">
+                    <div class="faq-question">
+                        <span>辟谷养生是否适合所有人？</span>
+                        <span class="material-icons">add</span>
+                    </div>
+                    <div class="faq-answer">
+                        辟谷养生并非适合所有人。孕妇、哺乳期妇女、未成年人、重症患者等特殊人群不建议进行辟谷。APP会在您注册时进行详细的健康评估，如不适合辟谷，系统会提供其他适合您的养生方案。
+                    </div>
+                </div>
+                
+                <div class="faq-item animate delay-3">
+                    <div class="faq-question">
+                        <span>如何确保辟谷过程的安全性？</span>
+                        <span class="material-icons">add</span>
+                    </div>
+                    <div class="faq-answer">
+                        辟谷养生APP高度重视用户安全，我们提供全程健康监测，实时追踪身体状况变化，设有智能预警系统，在发现潜在风险时及时提醒。同时，APP配备专业医师团队，随时解答用户疑问，确保辟谷过程安全可控。
+                    </div>
+                </div>
+                
+                <div class="faq-item animate delay-3">
+                    <div class="faq-question">
+                        <span>辟谷养生APP的独特优势是什么？</span>
+                        <span class="material-icons">add</span>
+                    </div>
+                    <div class="faq-answer">
+                        辟谷养生APP的核心优势在于将传统养生智慧与现代科技完美结合，提供科学、个性化的辟谷方案；全面的健康监测系统确保过程安全可控；专业的社区支持和专家指导让养生之旅不再孤单；丰富的知识库帮助用户深入了解辟谷文化和科学原理。
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="waitlist" class="section">
+            <div class="waitlist-container animate">
+                <h2 class="section-title">抢先体验内测资格，赢在起跑线！</h2>
+                <p class="section-subtitle">加入辟谷养生独家内测等待列表，第一时间获取内测邀请码、限量福利和专属优惠！名额有限，立即加入！</p>
+                
+                <form class="waitlist-form">
+                    <input type="email" class="waitlist-input" placeholder="输入您的邮箱地址">
+                    <button type="submit" class="waitlist-button">获取内测资格</button>
+                </form>
+            </div>
+        </section>
+        
+        <section id="videos" class="section">
+            <h2 class="section-title animate">用户真实案例 - 看辟谷养生如何助力用户实现健康目标</h2>
+            <p class="section-subtitle animate delay-1">精选视频，展示辟谷养生的实际应用效果</p>
+            
+            <div class="video-container">
+                <div class="videos-grid">
+                    <div class="video-card animate delay-1">
+                        <iframe class="video-iframe" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <div class="video-info">
+                            <div class="video-title">辟谷养生用户分享：21天减重塑形计划全纪录</div>
+                            <div class="video-channel">辟谷养生官方频道</div>
+                        </div>
+                    </div>
+                    
+                    <div class="video-card animate delay-2">
+                        <iframe class="video-iframe" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <div class="video-info">
+                            <div class="video-title">专家讲解：辟谷养生的科学原理与健康益处</div>
+                            <div class="video-channel">健康中国</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="twitter" class="section">
+            <h2 class="section-title animate">用户口碑 - Twitter实时热议辟谷养生的惊人效果</h2>
+            <p class="section-subtitle animate delay-1">来自真实用户的实时反馈</p>
+            
+            <div class="twitter-container">
+                <div class="tweets-grid">
+                    <div class="tweet-card animate delay-1">
+                        <div class="tweet-info">
+                            <div class="tweet-author">李小明 @xiaoming</div>
+                            <div class="tweet-date">2小时前</div>
+                            <div class="tweet-content">
+                                使用辟谷养生APP一个月了，不仅减重5kg，更重要的是整个人精气神完全不同了！皮肤变好，睡眠质量提升，工作效率也高了。真的太感谢这款APP了！ #辟谷养生 #健康生活
+                            </div>
+                            <div class="tweet-stats">
+                                <div class="tweet-stat">
+                                    <span class="material-icons">favorite</span>
+                                    128
+                                </div>
+                                <div class="tweet-stat">
+                                    <span class="material-icons">repeat</span>
+                                    42
+                                </div>
+                                <div class="tweet-stat">
+                                    <span class="material-icons">comment</span>
+                                    23
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tweet-card animate delay-2">
+                        <div class="tweet-info">
+                            <div class="tweet-author">健康达人 @healthexpert</div>
+                            <div class="tweet-date">昨天</div>
+                            <div class="tweet-content">
+                                作为健康领域从业者，我试用了很多养生APP，辟谷养生绝对是同类产品中的佼佼者。它的科学性、专业度和用户体验都远超同行。强烈推荐给所有关注健康的朋友！ #专业推荐 #辟谷养生
+                            </div>
+                            <div class="tweet-stats">
+                                <div class="tweet-stat">
+                                    <span class="material-icons">favorite</span>
+                                    256
+                                </div>
+                                <div class="tweet-stat">
+                                    <span class="material-icons">repeat</span>
+                                    78
+                                </div>
+                                <div class="tweet-stat">
+                                    <span class="material-icons">comment</span>
+                                    45
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center" style="margin-top: var(--space-xl);">
+                <a href="register.html" class="button primary">
+                    <span class="material-icons button-icon">star</span>
+                    立即加入，体验惊人效果
+                </a>
+            </div>
+        </section>
+        
+        <section id="benefits" class="section">
+            <h2 class="section-title animate">辟谷养生带给您的六大关键优势</h2>
+            <p class="section-subtitle animate delay-1">科学养生，全方位提升身心健康</p>
+            
+            <div class="benefits-grid animate delay-2">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <span class="material-icons">flash_on</span>
+                    </div>
+                    <h3 class="benefit-title">能量提升</h3>
+                    <p class="benefit-desc">告别疲惫感，激发身体活力，让您精力充沛整天</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <span class="material-icons">fitness_center</span>
+                    </div>
+                    <h3 class="benefit-title">减重塑形</h3>
+                    <p class="benefit-desc">科学减脂，改善体态，打造理想身材曲线</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <span class="material-icons">favorite</span>
+                    </div>
+                    <h3 class="benefit-title">健康改善</h3>
+                    <p class="benefit-desc">提升免疫力，改善亚健康状态，远离常见疾病</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <span class="material-icons">psychology</span>
+                    </div>
+                    <h3 class="benefit-title">心理平衡</h3>
+                    <p class="benefit-desc">缓解压力，提升情绪稳定性，培养积极心态</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <span class="material-icons">wb_sunny</span>
+                    </div>
+                    <h3 class="benefit-title">文化体验</h3>
+                    <p class="benefit-desc">体验传统养生智慧，感受中华文化精髓</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <span class="material-icons">schedule</span>
+                    </div>
+                    <h3 class="benefit-title">效率提升</h3>
+                    <p class="benefit-desc">清晰思维，提高工作效率，更好地平衡生活</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="expert-team" class="section">
+            <h2 class="section-title animate">专业团队保障您的养生之旅</h2>
+            <p class="section-subtitle animate delay-1">背靠顶尖中医专家和现代科学研究，为您提供最权威的养生指导</p>
+            
+            <div class="experts-grid animate delay-2">
+                <div class="expert-card">
+                    <img src="https://randomuser.me/api/portraits/men/54.jpg" class="expert-avatar">
+                    <h3 class="expert-name">张教授</h3>
+                    <div class="expert-title">中医学博士，养生研究专家</div>
+                    <div class="expert-desc">30年临床经验，主攻中医辟谷养生理论研究，出版专著10余部</div>
+                </div>
+                
+                <div class="expert-card">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" class="expert-avatar">
+                    <h3 class="expert-name">周医师</h3>
+                    <div class="expert-title">营养学博士，健康管理顾问</div>
+                    <div class="expert-desc">专注于现代营养学与传统养生理论结合，研发多种科学养生方案</div>
+                </div>
+                
+                <div class="expert-card">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" class="expert-avatar">
+                    <h3 class="expert-name">李博士</h3>
+                    <div class="expert-title">生理学专家，养生数据分析师</div>
+                    <div class="expert-desc">致力于通过数据分析优化个性化养生方案，提供科学养生指导</div>
+                </div>
+            </div>
+            
+            <div class="text-center" style="margin-top: var(--space-xl);">
+                <a href="#" class="button outline">
+                    <span class="material-icons button-icon">people</span>
+                    了解更多专家团队
+                </a>
+            </div>
+        </section>
+        
+        <section id="results" class="section">
+            <h2 class="section-title animate">真实用户，真实效果</h2>
+            <p class="section-subtitle animate delay-1">科学数据验证的健康改善成果</p>
+            
+            <div class="results-grid animate delay-2">
+                <div class="result-card">
+                    <div class="result-header">
+                        <div class="result-stat">92%</div>
+                        <div class="result-title">用户达成目标</div>
+                    </div>
+                    <div class="result-body">
+                        <p>超过9成的用户在使用辟谷养生APP后成功达成了自己设定的健康目标，远高于行业平均水平。</p>
+                    </div>
+                </div>
+                
+                <div class="result-card">
+                    <div class="result-header">
+                        <div class="result-stat">14天</div>
+                        <div class="result-title">平均见效时间</div>
+                    </div>
+                    <div class="result-body">
+                        <p>用户反馈平均在使用APP两周后，开始感受到明显的身体变化和健康改善。</p>
+                    </div>
+                </div>
+                
+                <div class="result-card">
+                    <div class="result-header">
+                        <div class="result-stat">4.8/5</div>
+                        <div class="result-title">用户满意度</div>
+                    </div>
+                    <div class="result-body">
+                        <p>根据10,000多名用户的评价，辟谷养生APP获得了近乎满分的用户满意度评分。</p>
+                    </div>
+                </div>
+                
+                <div class="result-card">
+                    <div class="result-header">
+                        <div class="result-stat">5-8kg</div>
+                        <div class="result-title">平均减重</div>
+                    </div>
+                    <div class="result-body">
+                        <p>选择减重计划的用户在一个月内平均减重5-8公斤，且无明显反弹现象。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="media" class="section">
+            <h2 class="section-title animate">媒体报道</h2>
+            <p class="section-subtitle animate delay-1">各大权威媒体争相报道辟谷养生的突破性成果</p>
+            
+            <div class="media-slider animate delay-2">
+                <div class="media-quote">
+                    <div class="quote-symbol">"</div>
+                    <p class="quote-content">辟谷养生APP是传统养生与现代科技结合的典范，为用户带来前所未有的养生体验。</p>
+                    <div class="quote-source">— 《健康时报》</div>
+                </div>
+                
+                <div class="media-quote">
+                    <div class="quote-symbol">"</div>
+                    <p class="quote-content">经过严格测试，辟谷养生APP的科学性和有效性得到了专业医学团队的一致认可。</p>
+                    <div class="quote-source">— 《中国养生》杂志</div>
+                </div>
+                
+                <div class="media-quote">
+                    <div class="quote-symbol">"</div>
+                    <p class="quote-content">辟谷养生APP独特的个性化方案，让传统养生焕发新活力，引领行业新潮流。</p>
+                    <div class="quote-source">— 央视《健康之路》</div>
+                </div>
+            </div>
+            
+            <div class="media-logos">
+                <div class="media-logo">
+                    <svg width="120" height="40" viewBox="0 0 120 40" fill="white">
+                        <rect x="10" y="10" width="100" height="20" rx="4" fill="none" stroke="white"/>
+                        <text x="15" y="25" fill="white" font-family="Arial" font-size="12">健康时报</text>
+                    </svg>
+                </div>
+                <div class="media-logo">
+                    <svg width="120" height="40" viewBox="0 0 120 40" fill="white">
+                        <rect x="10" y="10" width="100" height="20" rx="4" fill="none" stroke="white"/>
+                        <text x="15" y="25" fill="white" font-family="Arial" font-size="12">中国养生杂志</text>
+                    </svg>
+                </div>
+                <div class="media-logo">
+                    <svg width="120" height="40" viewBox="0 0 120 40" fill="white">
+                        <rect x="10" y="10" width="100" height="20" rx="4" fill="none" stroke="white"/>
+                        <text x="15" y="25" fill="white" font-family="Arial" font-size="12">央视健康</text>
+                    </svg>
+                </div>
+                <div class="media-logo">
+                    <svg width="120" height="40" viewBox="0 0 120 40" fill="white">
+                        <rect x="10" y="10" width="100" height="20" rx="4" fill="none" stroke="white"/>
+                        <text x="15" y="25" fill="white" font-family="Arial" font-size="12">人民健康网</text>
+                    </svg>
+                </div>
+            </div>
+        </section>
+        
+        <section id="comparison" class="section">
+            <h2 class="section-title animate">为什么选择辟谷养生APP？</h2>
+            <p class="section-subtitle animate delay-1">与其他养生方式的全方位对比，看清辟谷养生的独特优势</p>
+            
+            <div class="comparison-table animate delay-2">
+                <div class="comparison-header">
+                    <div class="comparison-feature">核心特性</div>
+                    <div class="comparison-us">辟谷养生APP</div>
+                    <div class="comparison-others">传统养生APP</div>
+                    <div class="comparison-others">普通健康APP</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-feature">个性化方案</div>
+                    <div class="comparison-us"><span class="material-icons check">check_circle</span> AI智能定制</div>
+                    <div class="comparison-others"><span class="material-icons partial">check_circle_outline</span> 有限选择</div>
+                    <div class="comparison-others"><span class="material-icons no">close</span> 标准模板</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-feature">专家指导</div>
+                    <div class="comparison-us"><span class="material-icons check">check_circle</span> 专业团队实时指导</div>
+                    <div class="comparison-others"><span class="material-icons partial">check_circle_outline</span> 有限支持</div>
+                    <div class="comparison-others"><span class="material-icons no">close</span> 无专家支持</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-feature">科学监测</div>
+                    <div class="comparison-us"><span class="material-icons check">check_circle</span> 全面健康数据监测</div>
+                    <div class="comparison-others"><span class="material-icons partial">check_circle_outline</span> 基础监测</div>
+                    <div class="comparison-others"><span class="material-icons partial">check_circle_outline</span> 简单追踪</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-feature">传统智慧</div>
+                    <div class="comparison-us"><span class="material-icons check">check_circle</span> 中医理论科学结合</div>
+                    <div class="comparison-others"><span class="material-icons partial">check_circle_outline</span> 部分应用</div>
+                    <div class="comparison-others"><span class="material-icons no">close</span> 几乎不涉及</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-feature">社区支持</div>
+                    <div class="comparison-us"><span class="material-icons check">check_circle</span> 活跃社区与经验分享</div>
+                    <div class="comparison-others"><span class="material-icons partial">check_circle_outline</span> 有限互动</div>
+                    <div class="comparison-others"><span class="material-icons no">close</span> 无社区功能</div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="guarantee" class="section">
+            <h2 class="section-title animate">我们的承诺</h2>
+            <p class="section-subtitle animate delay-1">您的健康，我们的责任</p>
+            
+            <div class="guarantees-container animate delay-2">
+                <div class="guarantee-card">
+                    <div class="guarantee-icon">
+                        <span class="material-icons">verified_user</span>
+                    </div>
+                    <h3>30天满意保证</h3>
+                    <p>如您在30天内对我们的服务不满意，可无条件退款</p>
+                </div>
+                
+                <div class="guarantee-card">
+                    <div class="guarantee-icon">
+                        <span class="material-icons">health_and_safety</span>
+                    </div>
+                    <h3>健康安全保障</h3>
+                    <p>所有方案经专业医学团队审核，确保健康安全</p>
+                </div>
+                
+                <div class="guarantee-card">
+                    <div class="guarantee-icon">
+                        <span class="material-icons">privacy_tip</span>
+                    </div>
+                    <h3>隐私数据保护</h3>
+                    <p>严格的数据加密和隐私政策，保护您的个人信息</p>
+                </div>
+            </div>
+        </section>
+        
+        <footer class="landing-footer">
+            <div class="footer-company">
+                <div class="footer-logo">
+                    <span class="gradient-text">辟谷养生</span>
+                </div>
+                <div class="footer-description">
+                    结合传统智慧与现代科技，为您提供科学、个性化的辟谷养生解决方案，让健康管理变得简单而高效。
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <span class="material-icons">public</span>
+                    </a>
+                    <a href="#" class="social-link">
+                        <span class="material-icons">alternate_email</span>
+                    </a>
+                    <a href="#" class="social-link">
+                        <span class="material-icons">chat</span>
+                    </a>
+                    <a href="#" class="social-link">
+                        <span class="material-icons">videocam</span>
+                    </a>
+                </div>
+                <div class="language-selector">
+                    <span class="material-icons">language</span>
+                    <select id="language-select" data-i18n="language-selector">
+                        <option value="zh">中文</option>
+                        <option value="en">English</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-title">产品</div>
+                <a href="#features" class="footer-link">核心功能</a>
+                <a href="#pricing" class="footer-link">价格方案</a>
+                <a href="#testimonials" class="footer-link">用户评价</a>
+                <a href="#waitlist" class="footer-link">加入等待列表</a>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-title">资源</div>
+                <a href="#" class="footer-link">辟谷知识库</a>
+                <a href="#" class="footer-link">养生指南</a>
+                <a href="#" class="footer-link">研究报告</a>
+                <a href="#" class="footer-link">帮助中心</a>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-title">公司</div>
+                <a href="#" class="footer-link">关于我们</a>
+                <a href="#" class="footer-link">联系我们</a>
+                <a href="#" class="footer-link">隐私政策</a>
+                <a href="#" class="footer-link">服务条款</a>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2023 辟谷养生. 保留所有权利.
+            </div>
+        </footer>
     </div>
-  </div>
+    
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Animate elements when they come into view
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.animate').forEach(el => {
+            el.style.animationPlayState = 'paused';
+            observer.observe(el);
+        });
+        
+        // Multi-language support
+        const languageSelect = document.getElementById('language-select');
+        
+        // Load language file and translate content
+        function loadLanguage(lang) {
+            fetch(`/${lang}.json`)
+                .then(response => response.json())
+                .then(translations => {
+                    document.querySelectorAll('[data-i18n]').forEach(element => {
+                        const key = element.getAttribute('data-i18n');
+                        if (translations[key]) {
+                            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                                element.placeholder = translations[key];
+                            } else {
+                                element.textContent = translations[key];
+                            }
+                        }
+                    });
+                })
+                .catch(error => console.error('Error loading language file:', error));
+        }
+        
+        // Change language event
+        languageSelect.addEventListener('change', function() {
+            loadLanguage(this.value);
+        });
+        
+        // Initialize with default language
+        loadLanguage('zh');
+        
+        // FAQ toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                const icon = this.querySelector('.material-icons');
+                
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                    icon.textContent = 'add';
+                } else {
+                    answer.style.display = 'block';
+                    icon.textContent = 'remove';
+                }
+            });
+        });
+    </script>
 </body>
-
 </html>

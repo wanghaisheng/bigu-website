@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>养生顾问 - 辟谷养生APP</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="screen" id="ai-chat">
+            <div class="header">
+                <button class="icon-button" onclick="window.location.href='home.html'">
+                    <span class="material-icons">arrow_back</span>
+                </button>
+                <div class="header-title">智能养生顾问</div>
+                <div class="header-action">
+                    <button class="icon-button">
+                        <span class="material-icons">more_vert</span>
+                    </button>
+                </div>
+            </div>
+            <div class="ai-chat-container">
+                <div class="chat-welcome">
+                    <div class="ai-avatar">
+                        <span class="material-icons">psychology</span>
+                    </div>
+                    <h3>您好，我是您的辟谷养生顾问</h3>
+                    <p>我可以回答您关于辟谷养生的问题，提供专业建议，或帮助您解决辟谷过程中遇到的困难</p>
+                    <div class="suggested-questions">
+                        <div class="suggestion-chip">辟谷新手须知有哪些？</div>
+                        <div class="suggestion-chip">如何缓解辟谷期间的饥饿感？</div>
+                        <div class="suggestion-chip">辟谷后如何正确复食？</div>
+                    </div>
+                </div>
+                
+                <div id="chat-messages" class="ai-chat-messages">
+                    <!-- Chat messages will be added here dynamically -->
+                </div>
+            </div>
+            
+            <div class="ai-chat-input-container">
+                <input type="text" id="ai-chat-input" class="ai-chat-input" placeholder="输入您的问题...">
+                <button id="ai-send-button" class="ai-send-button">
+                    <span class="material-icons">send</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册 - 辟谷养生APP</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="screen" id="register">
+            <div class="header">
+                <button class="icon-button" onclick="window.location.href='index.html'">
+                    <span class="material-icons">arrow_back</span>
+                </button>
+                <div class="header-title">创建账号</div>
+            </div>
+            <div class="full-content">
+                <div class="onboarding-progress">
+                    <div class="progress-step active">1</div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step">2</div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step">3</div>
+                </div>
+                <div class="section-title" style="margin-top: var(--space-xl);">基本信息</div>
+                <div class="form-group">
+                    <label class="form-label">用户名</label>
+                    <input type="text" class="form-input" placeholder="请设置您的用户名">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">邮箱</label>
+                    <input type="email" class="form-input" placeholder="请输入您的邮箱">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">密码</label>
+                    <input type="password" class="form-input" placeholder="请设置您的密码">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">确认密码</label>
+                    <input type="password" class="form-input" placeholder="请再次输入密码">
+                </div>
+                <a href="goal-selection.html" class="button primary full" style="margin-top: var(--space-xl);">
+                    下一步：选择目标
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
+

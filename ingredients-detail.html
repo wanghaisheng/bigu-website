@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>成分配比 - 辟谷养生APP</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="screen" id="ingredients-detail">
+            <div class="header">
+                <button class="icon-button" onclick="window.location.href='product-detail.html'">
+                    <span class="material-icons">arrow_back</span>
+                </button>
+                <div class="header-title">成分配比</div>
+            </div>
+            <div class="full-content">
+                <div class="product-details-card">
+                    <div class="details-tabs">
+                        <div class="details-tab" data-tab="description" onclick="window.location.href='product-detail.html'">产品详情</div>
+                        <div class="details-tab active" data-tab="ingredients">成分配比</div>
+                        <div class="details-tab" data-tab="usage" onclick="window.location.href='usage-detail.html'">使用方法</div>
+                        <div class="details-tab" data-tab="origin" onclick="window.location.href='origin-detail.html'">文化溯源</div>
+                    </div>
+                    
+                    <div class="details-content active">
+                        <div style="padding: var(--space-md);">
+                            <h3 style="margin-bottom: var(--space-md);">主要成分</h3>
+                            
+                            <div style="margin-bottom: var(--space-lg);">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: var(--space-sm);">
+                                    <div>有机藜麦粉</div>
+                                    <div>35%</div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 35%; background: var(--neon-green);"></div>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-bottom: var(--space-lg);">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: var(--space-sm);">
+                                    <div>黑芝麻蛋白</div>
+                                    <div>25%</div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 25%; background: var(--neon-blue);"></div>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-bottom: var(--space-lg);">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: var(--space-sm);">
+                                    <div>紫米提取物</div>
+                                    <div>20%</div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 20%; background: var(--primary);"></div>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-bottom: var(--space-lg);">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: var(--space-sm);">
+                                    <div>精制薏苡仁</div>
+                                    <div>15%</div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 15%; background: var(--neon-pink);"></div>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-bottom: var(--space-lg);">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: var(--space-sm);">
+                                    <div>其他天然成分</div>
+                                    <div>5%</div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 5%; background: var(--neon-yellow);"></div>
+                                </div>
+                            </div>
+                            
+                            <h3 style="margin: var(--space-lg) 0 var(--space-md);">营养成分表</h3>
+                            
+                            <div style="background: var(--bg-card-hover); border-radius: var(--radius-md); padding: var(--space-md); margin-bottom: var(--space-lg);">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: var(--space-sm); padding-bottom: var(--space-sm); border-bottom: 1px solid var(--border-light);">
+                                    <div>每份含量</div>
+                                    <div>40克</div>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; margin-bottom: var(--space-sm); padding-bottom: var(--space-sm); border-bottom: 1px solid var(--border-light);">
+                                    <div>能量</div>
+                                    <div>150千卡</div>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; margin-bottom: var(--space-sm); padding-bottom: var(--space-sm); border-bottom: 1px solid var(--border-light);">
+                                    <div>蛋白质</div>
+                                    <div>12克</div>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; margin-bottom: var(--space-sm); padding-bottom: var(--space-sm); border-bottom: 1px solid var(--border-light);">
+                                    <div>脂肪</div>
+                                    <div>5克</div>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; margin-bottom: var(--space-sm); padding-bottom: var(--space-sm); border-bottom: 1px solid var(--border-light);">
+                                    <div>碳水化合物</div>
+                                    <div>18克</div>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; margin-bottom: var(--space-sm); padding-bottom: var(--space-sm); border-bottom: 1px solid var(--border-light);">
+                                    <div>膳食纤维</div>
+                                    <div>8克</div>
+                                </div>
+                                <div style="display: flex; justify-content: space-between;">
+                                    <div>钠</div>
+                                    <div>120毫克</div>
+                                </div>
+                            </div>
+                            
+                            <div class="card" style="margin-bottom: var(--space-lg);">
+                                <h4 style="margin-bottom: var(--space-sm);">过敏原信息</h4>
+                                <p style="color: var(--text-secondary); font-size: 14px;">本产品不含麸质、乳制品、大豆、坚果、贝类。在含有坚果制品的工厂生产，可能有交叉污染风险。</p>
+                            </div>
+                            
+                            <div class="card">
+                                <h4 style="margin-bottom: var(--space-sm);">品质保证</h4>
+                                <p style="color: var(--text-secondary); font-size: 14px;">所有原料均通过有机认证，不含防腐剂、人工色素、香精和基因改造成分。生产过程符合国家食品安全标准，每批次均经过严格检测。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
+

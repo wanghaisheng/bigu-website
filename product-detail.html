@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>产品详情 - 辟谷养生APP</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="screen" id="product-detail">
+            <div class="header">
+                <button class="icon-button" onclick="window.location.href='products.html'">
+                    <span class="material-icons">arrow_back</span>
+                </button>
+                <div class="header-title">产品详情</div>
+                <div class="header-action">
+                    <button class="icon-button">
+                        <span class="material-icons">share</span>
+                    </button>
+                    <button class="icon-button">
+                        <span class="material-icons">shopping_cart</span>
+                    </button>
+                </div>
+            </div>
+            <div class="content">
+                <div class="product-gallery">
+                    <div class="product-image-large" style="background-image: url('https://images.unsplash.com/photo-1565600444102-063f8a7a1e67?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    <div class="product-thumbnails">
+                        <div class="product-thumbnail active" style="background-image: url('https://images.unsplash.com/photo-1565600444102-063f8a7a1e67?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                        <div class="product-thumbnail" style="background-image: url('https://images.unsplash.com/photo-1576045057995-568f588f82fb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                        <div class="product-thumbnail" style="background-image: url('https://images.unsplash.com/photo-1612535500858-42d864103c8e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    </div>
+                </div>
+                
+                <div class="product-info-card">
+                    <div class="product-tags">
+                        <span class="product-tag">代餐粉</span>
+                        <span class="product-tag">高蛋白</span>
+                        <span class="product-tag">纯天然</span>
+                    </div>
+                    <h2>五谷杂粮代餐粉</h2>
+                    <div class="product-price-large">¥128</div>
+                    <div class="product-rating-large">
+                        <div class="rating-stars">
+                            <span class="material-icons">star</span>
+                            <span class="material-icons">star</span>
+                            <span class="material-icons">star</span>
+                            <span class="material-icons">star</span>
+                            <span class="material-icons">star_half</span>
+                        </div>
+                        <div class="rating-value">4.8</div>
+                        <div class="rating-count">(238条评价)</div>
+                    </div>
+                </div>
+                
+                <div class="product-details-card">
+                    <div class="details-tabs">
+                        <div class="details-tab active" data-tab="description">产品详情</div>
+                        <div class="details-tab" data-tab="ingredients">成分配比</div>
+                        <div class="details-tab" data-tab="usage">使用方法</div>
+                        <div class="details-tab" data-tab="origin">文化溯源</div>
+                    </div>
+                    
+                    <div id="description-content" class="details-content active">
+                        <div class="product-description">
+                            <p>五谷杂粮代餐粉采用优质有机谷物精心研制，富含膳食纤维、优质蛋白质和多种维生素矿物质，是辟谷养生期间理想的营养补充品。</p>
+                            
+                            <div class="product-features">
+                                <div class="product-feature">
+                                    <div class="feature-icon">
+                                        <span class="material-icons">restaurant_menu</span>
+                                    </div>
+                                    <div class="feature-info">
+                                        <h4>强效饱腹感</h4>
+                                        <p>特殊配方设计，一杯可持续4-6小时饱腹感，有效抑制饥饿感。</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="product-feature">
+                                    <div class="feature-icon">
+                                        <span class="material-icons">fitness_center</span>
+                                    </div>
+                                    <div class="feature-info">
+                                        <h4>均衡营养</h4>
+                                        <p>含有18种氨基酸和多种微量元素，保证辟谷期间基础营养需求。</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="product-feature">
+                                    <div class="feature-icon">
+                                        <span class="material-icons">thumb_up</span>
+                                    </div>
+                                    <div class="feature-info">
+                                        <h4>易于消化</h4>
+                                        <p>低温研磨工艺，保留营养的同时提高消化吸收率。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="product-data">
+                                <h4>用户满意度调查</h4>
+                                <div class="data-chart">
+                                    <svg class="satisfaction-chart" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg">
+                                        <!-- 简化的图表表示 -->
+                                        <rect x="0" y="120" width="50" height="30" fill="rgba(140, 82, 255, 0.3)"/>
+                                        <rect x="60" y="100" width="50" height="50" fill="rgba(140, 82, 255, 0.5)"/>
+                                        <rect x="120" y="60" width="50" height="90" fill="rgba(140, 82, 255, 0.7)"/>
+                                        <rect x="180" y="30" width="50" height="120" fill="rgba(140, 82, 255, 0.9)"/>
+                                        <rect x="240" y="10" width="50" height="140" fill="rgb(140, 82, 255)"/>
+                                        
+                                        <text x="25" y="115" font-size="12" fill="white" text-anchor="middle">1星</text>
+                                        <text x="85" y="95" font-size="12" fill="white" text-anchor="middle">2星</text>
+                                        <text x="145" y="55" font-size="12" fill="white" text-anchor="middle">3星</text>
+                                        <text x="205" y="25" font-size="12" fill="white" text-anchor="middle">4星</text>
+                                        <text x="265" y="5" font-size="12" fill="white" text-anchor="middle">5星</text>
+                                    </svg>
+                                    <div class="chart-caption">基于238名用户的真实评价</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="ingredients-content" class="details-content">
+                        <!-- 内容将在ingredients-detail.html页面中 -->
+                    </div>
+                    
+                    <div id="usage-content" class="details-content">
+                        <!-- 内容将在usage-detail.html页面中 -->
+                    </div>
+                    
+                    <div id="origin-content" class="details-content">
+                        <!-- 内容将在origin-detail.html页面中 -->
+                    </div>
+                </div>
+                
+                <div class="traditional-origin-card">
+                    <h3>传统文化溯源</h3>
+                    <div class="origin-content">
+                        <p>五谷代餐的理念源自中国古代"五谷为养"的养生智慧，《黄帝内经》中记载："五谷为养，五果为助，五畜为益，五菜为充，气味合而服之，以补精益气。"</p>
+                        
+                        <div class="origin-comparison">
+                            <div class="origin-side">
+                                <div class="origin-title">传统配方</div>
+                                <div class="origin-ingredients">
+                                    <div class="origin-ingredient">黄米</div>
+                                    <div class="origin-ingredient">黑豆</div>
+                                    <div class="origin-ingredient">紫米</div>
+                                    <div class="origin-ingredient">薏苡仁</div>
+                                </div>
+                            </div>
+                            <div class="origin-divider">
+                                <div class="origin-arrow">
+                                    <span class="material-icons">east</span>
+                                </div>
+                            </div>
+                            <div class="origin-side">
+                                <div class="origin-title">现代升级</div>
+                                <div class="origin-ingredients">
+                                    <div class="origin-ingredient modern">有机藜麦</div>
+                                    <div class="origin-ingredient modern">黑芝麻蛋白</div>
+                                    <div class="origin-ingredient modern">紫米提取物</div>
+                                    <div class="origin-ingredient modern">精制薏苡仁</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-reviews-preview">
+                    <div class="reviews-header">
+                        <h3>用户评价</h3>
+                        <a href="#" class="more-link">查看全部</a>
+                    </div>
+                    
+                    <div class="review-card">
+                        <div class="review-header">
+                            <img src="https://randomuser.me/api/portraits/women/33.jpg" class="review-avatar">
+                            <div class="review-info">
+                                <div class="review-author">李小明</div>
+                                <div class="review-rating">
+                                    <span class="material-icons">star</span>
+                                    <span class="material-icons">star</span>
+                                    <span class="material-icons">star</span>
+                                    <span class="material-icons">star</span>
+                                    <span class="material-icons">star</span>
+                                </div>
+                            </div>
+                            <div class="review-date">2023.05.10</div>
+                        </div>
+                        <div class="review-content">
+                            <p>使用这款代餐粉已经两周了，效果非常好！饱腹感很强，一杯能顶半天。最重要的是口感竟然出奇的好，不会有代餐粉常见的那种怪味。我目前用它替代早餐，配合16小时轻断食，两周下来体重减了3公斤，体脂也有明显下降。</p>
+                        </div>
+                        <div class="review-images">
+                            <div class="review-image" style="background-image: url('https://images.unsplash.com/photo-1565895405138-6c3a1555da6a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');"></div>
+                            <div class="review-image" style="background-image: url('https://images.unsplash.com/photo-1588710277537-126980e8d44e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-purchase-bar">
+                    <div class="purchase-options">
+                        <div class="purchase-option active">
+                            <div class="option-name">标准装</div>
+                            <div class="option-price">¥128</div>
+                        </div>
+                        <div class="purchase-option">
+                            <div class="option-name">大容量</div>
+                            <div class="option-price">¥198</div>
+                        </div>
+                        <div class="purchase-option">
+                            <div class="option-name">礼盒装</div>
+                            <div class="option-price">¥268</div>
+                        </div>
+                    </div>
+                    <div class="purchase-buttons">
+                        <button class="button outline" style="flex: 1;">加入购物车</button>
+                        <button class="button primary" style="flex: 2;">立即购买</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

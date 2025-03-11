@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>症状导航器 - 辟谷养生APP</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="screen" id="symptom-navigator">
+            <div class="header">
+                <button class="icon-button" onclick="window.location.href='tools.html'">
+                    <span class="material-icons">arrow_back</span>
+                </button>
+                <div class="header-title">症状导航器</div>
+                <div class="header-action">
+                    <button class="icon-button">
+                        <span class="material-icons">history</span>
+                    </button>
+                </div>
+            </div>
+            <div class="full-content">
+                <div class="symptom-intro">
+                    <div class="symptom-icon">
+                        <span class="material-icons">healing</span>
+                    </div>
+                    <h3>辟谷期间不适症状自助导航</h3>
+                    <p>选择您正在经历的症状，获取应对建议</p>
+                </div>
+                
+                <div class="symptoms-grid">
+                    <div class="symptom-item">
+                        <div class="symptom-icon-small">
+                            <span class="material-icons">blur_on</span>
+                        </div>
+                        <div class="symptom-name">头晕</div>
+                    </div>
+                    <div class="symptom-item">
+                        <div class="symptom-icon-small">
+                            <span class="material-icons">flash_on</span>
+                        </div>
+                        <div class="symptom-name">心慌</div>
+                    </div>
+                    <div class="symptom-item">
+                        <div class="symptom-icon-small">
+                            <span class="material-icons">sentiment_very_dissatisfied</span>
+                        </div>
+                        <div class="symptom-name">恶心</div>
+                    </div>
+                    <div class="symptom-item">
+                        <div class="symptom-icon-small">
+                            <span class="material-icons">battery_alert</span>
+                        </div>
+                        <div class="symptom-name">疲劳</div>
+                    </div>
+                </div>
+                
+                <div class="selected-symptom-card">
+                    <div class="selected-symptom-header">
+                        <div class="selected-symptom-icon">
+                            <span class="material-icons">blur_on</span>
+                        </div>
+                        <h3>头晕应对方案</h3>
+                    </div>
+                    
+                    <div class="solution-steps">
+                        <div class="solution-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>立即休息</h4>
+                                <p>找一个安静的地方坐下或平躺，避免站立或走动，防止摔倒。</p>
+                            </div>
+                        </div>
+                        
+                        <div class="solution-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>补充水分</h4>
+                                <p>慢慢喝一杯温水，如有条件可添加少量盐或蜂蜜。</p>
+                            </div>
+                        </div>
+                        
+                        <div class="solution-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>深呼吸</h4>
+                                <p>进行缓慢深呼吸，每次深呼吸4-5秒，保持3-5分钟。</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="solution-decision">
+                        <div class="decision-question">症状是否有所缓解？</div>
+                        <div class="decision-options">
+                            <button class="button outline">
+                                <span class="button-icon material-icons">thumb_down</span>
+                                没有改善
+                            </button>
+                            <button class="button primary">
+                                <span class="button-icon material-icons">thumb_up</span>
+                                已有改善
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="serious-warning">
+                    <div class="warning-icon">
+                        <span class="material-icons">warning</span>
+                    </div>
+                    <div class="warning-content">
+                        <h4>严重症状警告</h4>
+                        <p>如果您出现以下症状，请立即停止辟谷并就医：</p>
+                        <ul>
+                            <li>持续性严重头晕或晕厥</li>
+                            <li>心跳异常或胸痛</li>
+                            <li>严重呕吐或腹痛</li>
+                            <li>体温异常升高</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="solution-actions">
+                    <button class="button primary full">
+                        <span class="button-icon material-icons">health_and_safety</span>
+                        联系养生顾问
+                    </button>
+                    <button class="button outline full">
+                        <span class="button-icon material-icons">restaurant</span>
+                        查看复食建议
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
+

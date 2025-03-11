@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>古籍详情 - 辟谷养生APP</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="screen" id="classic-detail">
+            <div class="header">
+                <button class="icon-button" onclick="window.location.href='knowledge.html'">
+                    <span class="material-icons">arrow_back</span>
+                </button>
+                <div class="header-title">古籍详情</div>
+                <div class="header-action">
+                    <button class="icon-button">
+                        <span class="material-icons">bookmark_border</span>
+                    </button>
+                    <button class="icon-button">
+                        <span class="material-icons">share</span>
+                    </button>
+                </div>
+            </div>
+            <div class="full-content">
+                <div class="classic-header">
+                    <div class="classic-illustration">
+                        <svg class="classic-scroll" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="30" y="20" width="140" height="160" rx="5" fill="#F3E9D2"/>
+                            <path d="M30,30 C50,20 150,20 170,30" stroke="#6D9788" stroke-width="2" fill="none"/>
+                            <path d="M30,170 C50,180 150,180 170,170" stroke="#6D9788" stroke-width="2" fill="none"/>
+                            <rect x="50" y="40" width="100" height="120" fill="#F3E9D2"/>
+                            <rect x="60" y="50" width="80" height="2" rx="1" fill="#4A638C"/>
+                            <rect x="60" y="60" width="80" height="2" rx="1" fill="#4A638C"/>
+                            <rect x="60" y="70" width="80" height="2" rx="1" fill="#4A638C"/>
+                            <rect x="60" y="80" width="60" height="2" rx="1" fill="#4A638C"/>
+                            <rect x="60" y="100" width="80" height="2" rx="1" fill="#4A638C"/>
+                            <rect x="60" y="110" width="80" height="2" rx="1" fill="#4A638C"/>
+                            <rect x="60" y="120" width="80" height="2" rx="1" fill="#4A638C"/>
+                            <rect x="60" y="130" width="60" height="2" rx="1" fill="#4A638C"/>
+                        </svg>
+                    </div>
+                    <h2>《黄帝内经》</h2>
+                    <div class="classic-info">
+                        <div class="classic-author">战国时期著作</div>
+                        <div class="classic-type">医学经典 · 养生智慧</div>
+                    </div>
+                </div>
+                
+                <div class="classic-content-card">
+                    <div class="content-tabs">
+                        <div class="content-tab active">原文与注解</div>
+                        <div class="content-tab">现代解读</div>
+                        <div class="content-tab">相关篇章</div>
+                    </div>
+                    
+                    <div class="original-content">
+                        <div class="original-paragraph">
+                            <div class="paragraph-text">
+                                <div class="ancient-text">
+                                    "黄帝曰：余闻上古之人，春秋皆度百岁，而动作不衰；今时之人，年半百而动作皆衰，时世异耶？人将失之耶？"
+                                </div>
+                                <div class="translation-panel">
+                                    <div class="translation-header">
+                                        <h4>白话翻译</h4>
+                                        <button class="close-translation">
+                                            <span class="material-icons">close</span>
+                                        </button>
+                                    </div>
+                                    <p>黄帝问道：我听说古代的人，都能活到一百多岁，而且行动自如，不显衰老；现在的人，才五十多岁就行动迟缓，身体衰弱，是时代变了呢？还是人自己没有保养好呢？</p>
+                                </div>
+                                <div class="expert-note">
+                                    <img src="https://randomuser.me/api/portraits/men/54.jpg" class="expert-avatar">
+                                    <div class="expert-comment">
+                                        <div class="expert-name">张教授</div>
+                                        <p>这段话引出了黄帝内经对养生长寿的基本思考，点明时代变迁与个人保养的关系。在辟谷理论中，这段话常被引用来说明人体本有长寿潜能，关键在于养生方法。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="paragraph-interaction">
+                                <button class="interaction-button">
+                                    <span class="material-icons">bookmark_border</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="original-paragraph">
+                            <div class="paragraph-text">
+                                <div class="ancient-text">
+                                    "岐伯对曰：上古之人，其知道者，法于阴阳，和于术数，食饮有节，起居有常，不妄作劳，故能形与神俱，而尽终其天年，度百岁乃去。"
+                                </div>
+                                <div class="translation-panel">
+                                    <div class="translation-header">
+                                        <h4>白话翻译</h4>
+                                        <button class="close-translation">
+                                            <span class="material-icons">close</span>
+                                        </button>
+                                    </div>
+                                    <p>岐伯回答说：古代那些懂得养生之道的人，他们遵循阴阳规律，符合养生方法，饮食有节制，作息有规律，不过度劳累，所以能够形体与精神都保持良好状态，活到天年，年过百岁才离世。</p>
+                                </div>
+                            </div>
+                            <div class="paragraph-interaction">
+                                <button class="interaction-button active">
+                                    <span class="material-icons">bookmark</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="original-paragraph">
+                            <div class="paragraph-text">
+                                <div class="ancient-text">
+                                    "今时之人不然也，以酒为浆，以妄为常，醉以入房，以欲竭其精，以耗散其真，不知持满，不时御神，务快其心，逆于生乐，起居无节，故半百而衰也。"
+                                </div>
+                                <div class="translation-panel">
+                                    <div class="translation-header">
+                                        <h4>白话翻译</h4>
+                                        <button class="close-translation">
+                                            <span class="material-icons">close</span>
+                                        </button>
+                                    </div>
+                                    <p>现在的人不是这样，他们把酒当水喝，把不正常的生活方式当作常态，醉酒后行房事，放纵欲望耗损精气，消耗真元，不知道保持充盈，不按时调养精神，只求一时痛快，违背生命规律，生活没有规律，所以才五十岁就衰老了。</p>
+                                </div>
+                                <div class="expert-note">
+                                    <img src="https://randomuser.me/api/portraits/men/54.jpg" class="expert-avatar">
+                                    <div class="expert-comment">
+                                        <div class="expert-name">张教授</div>
+                                        <p>这段话涉及"食饮有节"的理念，是辟谷养生的理论基础之一。古人认为暴饮暴食会损伤脾胃，而有节制的饮食甚至是短期辟谷能让脏腑得到休息，恢复正常功能。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="paragraph-interaction">
+                                <button class="interaction-button">
+                                    <span class="material-icons">bookmark_border</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="related-classics-card">
+                    <h3>相关古籍</h3>
+                    <div class="related-classics">
+                        <a href="#" class="related-classic">
+                            <div class="related-classic-icon">
+                                <span class="material-icons">menu_book</span>
+                            </div>
+                            <div class="related-classic-info">
+                                <h4>《养生论》</h4>
+                                <div class="related-classic-desc">魏晋时期嵇康著作，阐述养生与辟谷关系</div>
+                            </div>
+                            <span class="material-icons">chevron_right</span>
+                        </a>
+                        
+                        <a href="#" class="related-classic">
+                            <div class="related-classic-icon">
+                                <span class="material-icons">menu_book</span>
+                            </div>
+                            <div class="related-classic-info">
+                                <h4>《千金要方》</h4>
+                                <div class="related-classic-desc">唐代孙思邈著作，详述辟谷丸配方</div>
+                            </div>
+                            <span class="material-icons">chevron_right</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
+

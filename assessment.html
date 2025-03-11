@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>健康评估 - 辟谷养生APP</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="screen" id="assessment">
+            <div class="header">
+                <button class="icon-button" onclick="window.location.href='goal-selection.html'">
+                    <span class="material-icons">arrow_back</span>
+                </button>
+                <div class="header-title">健康风险评估</div>
+            </div>
+            <div class="full-content">
+                <div class="onboarding-progress">
+                    <div class="progress-step completed">1</div>
+                    <div class="progress-line completed"></div>
+                    <div class="progress-step completed">2</div>
+                    <div class="progress-line completed"></div>
+                    <div class="progress-step active">3</div>
+                </div>
+                
+                <div class="assessment-intro">
+                    <div class="assessment-icon">
+                        <span class="material-icons">health_and_safety</span>
+                    </div>
+                    <h3>简单了解您的健康状况</h3>
+                    <p>完成以下健康评估，我们将为您提供更安全、更适合的养生方案</p>
+                </div>
+                
+                <div class="assessment-questions">
+                    <div class="assessment-question">
+                        <div class="question-text">1. 您目前的健康状况如何？</div>
+                        <div class="option-group">
+                            <label class="radio-option">
+                                <input type="radio" name="health" value="great"> 非常健康，定期锻炼
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="health" value="good"> 良好，偶尔有小问题
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="health" value="ok"> 一般，有时感到疲劳
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="health" value="poor"> 较差，经常感到不适
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="assessment-question">
+                        <div class="question-text">2. 您是否有慢性疾病？</div>
+                        <div class="option-group">
+                            <label class="radio-option">
+                                <input type="radio" name="chronic" value="none"> 没有
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="chronic" value="minor"> 有轻微慢性病（如轻度过敏）
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="chronic" value="controlled"> 有慢性病但控制良好
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="chronic" value="serious"> 有需要定期治疗的慢性病
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="assessment-question">
+                        <div class="question-text">3. 您之前是否有过辟谷或断食经验？</div>
+                        <div class="option-group">
+                            <label class="radio-option">
+                                <input type="radio" name="experience" value="expert"> 有丰富经验
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="experience" value="some"> 有一些经验
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="experience" value="little"> 尝试过一两次
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="experience" value="none"> 完全没有经验
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="resource-package.html" class="button primary full" style="margin-top: var(--space-xl);">
+                    完成评估
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
+

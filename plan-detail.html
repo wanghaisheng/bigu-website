@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计划详情 - 辟谷养生APP</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="screen" id="plan-detail">
+            <div class="header">
+                <button class="icon-button" onclick="window.location.href='home.html'">
+                    <span class="material-icons">arrow_back</span>
+                </button>
+                <div class="header-title">计划详情</div>
+                <div class="header-action">
+                    <button class="icon-button">
+                        <span class="material-icons">more_vert</span>
+                    </button>
+                </div>
+            </div>
+            <div class="full-content">
+                <div class="plan-hero">
+                    <h2>21天减重计划</h2>
+                    <div class="plan-progress-detail">
+                        <div class="progress-bar-large">
+                            <div class="progress-fill" style="width: 38%;"></div>
+                        </div>
+                        <div class="plan-day">Day 8/21</div>
+                    </div>
+                </div>
+                
+                <div class="today-schedule-card">
+                    <div class="schedule-header">
+                        <h3>今日安排</h3>
+                        <div class="schedule-date">5月16日，星期二</div>
+                    </div>
+                    
+                    <div class="schedule-item">
+                        <div class="schedule-time">7:00</div>
+                        <div class="schedule-content">
+                            <div class="schedule-icon" style="background: var(--neon-blue);">
+                                <span class="material-icons">water_drop</span>
+                            </div>
+                            <div class="schedule-detail">
+                                <h4>温水 500ml</h4>
+                                <p>起床后饮用，促进新陈代谢</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="schedule-item">
+                        <div class="schedule-time">12:00</div>
+                        <div class="schedule-content">
+                            <div class="schedule-icon" style="background: var(--primary);">
+                                <span class="material-icons">restaurant</span>
+                            </div>
+                            <div class="schedule-detail">
+                                <h4>午餐 - 藜麦蔬菜沙拉</h4>
+                                <p>富含蛋白质和膳食纤维</p>
+                                <a href="#" class="schedule-link">查看食谱 ></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="schedule-item">
+                        <div class="schedule-time">19:00</div>
+                        <div class="schedule-content">
+                            <div class="schedule-icon" style="background: var(--neon-pink);">
+                                <span class="material-icons">self_improvement</span>
+                            </div>
+                            <div class="schedule-detail">
+                                <h4>15分钟冥想</h4>
+                                <p>舒缓压力，提高睡眠质量</p>
+                                <a href="#" class="schedule-link">播放引导音频 ></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="daily-tracking-card">
+                    <h3>今日数据追踪</h3>
+                    <div class="tracking-metrics">
+                        <div class="tracking-item">
+                            <div class="tracking-label">饥饿感 (1-10)</div>
+                            <div class="tracking-input-container">
+                                <div class="tracking-scale">
+                                    <span class="scale-point">轻微</span>
+                                    <span class="scale-point">适中</span>
+                                    <span class="scale-point">强烈</span>
+                                </div>
+                                <input type="range" min="1" max="10" value="4" class="tracking-range">
+                            </div>
+                        </div>
+                        
+                        <div class="tracking-item">
+                            <div class="tracking-label">能量水平 (1-10)</div>
+                            <div class="tracking-input-container">
+                                <div class="tracking-scale">
+                                    <span class="scale-point">疲惫</span>
+                                    <span class="scale-point">正常</span>
+                                    <span class="scale-point">充沛</span>
+                                </div>
+                                <input type="range" min="1" max="10" value="7" class="tracking-range">
+                            </div>
+                        </div>
+                        
+                        <div class="tracking-item">
+                            <div class="tracking-label">水分摄入 (ml)</div>
+                            <div class="tracking-input-container">
+                                <div class="tracking-scale">
+                                    <span class="scale-point">0ml</span>
+                                    <span class="scale-point">1000ml</span>
+                                    <span class="scale-point">2000ml</span>
+                                </div>
+                                <input type="range" min="0" max="2000" value="1200" class="tracking-range">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tracking-notes">
+                        <div class="notes-label">今日笔记</div>
+                        <textarea class="notes-input" placeholder="记录今天的感受，不适症状或其他观察..."></textarea>
+                    </div>
+                    
+                    <button class="button primary full">保存今日数据</button>
+                </div>
+                
+                <div class="plan-tips-card">
+                    <div class="tips-header">
+                        <span class="material-icons">tips_and_updates</span>
+                        <h3>专家提示</h3>
+                    </div>
+                    <div class="tips-content">
+                        <p>断食期间如出现头晕、心慌等不适，建议立即补充少量糖分或盐分。</p>
+                        <p>间歇性断食期间保持充足水分摄入，可有效缓解饥饿感。</p>
+                    </div>
+                </div>
+                
+                <div class="plan-community-card">
+                    <h3>计划社区</h3>
+                    <div class="community-preview">
+                        <div class="community-members">
+                            <div class="member-avatars">
+                                <img src="https://randomuser.me/api/portraits/women/33.jpg" class="avatar small">
+                                <img src="https://randomuser.me/api/portraits/men/54.jpg" class="avatar small">
+                                <img src="https://randomuser.me/api/portraits/women/68.jpg" class="avatar small">
+                                <div class="members-more">+42</div>
+                            </div>
+                            <div class="members-info">
+                                <div class="members-count">46人参与此计划</div>
+                                <div class="active-now">
+                                    <span class="pulse"></span>
+                                    8人在线讨论中
+                                </div>
+                            </div>
+                        </div>
+                        <button class="button outline full">
+                            <span class="material-icons button-icon">forum</span>
+                            加入社区讨论
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
+

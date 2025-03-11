@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>知识库 - 辟谷养生APP</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="screen" id="knowledge">
+            <div class="header">
+                <div class="header-title">养生知识库</div>
+                <div class="header-action">
+                    <button class="icon-button">
+                        <span class="material-icons">search</span>
+                    </button>
+                    <button class="icon-button">
+                        <span class="material-icons">bookmark</span>
+                    </button>
+                </div>
+            </div>
+            <div class="content">
+                <div class="knowledge-categories">
+                    <div class="category-item active">推荐</div>
+                    <div class="category-item">养生经典</div>
+                    <div class="category-item">实践指南</div>
+                    <div class="category-item">研究报告</div>
+                    <div class="category-item">饮食疗法</div>
+                </div>
+                
+                <div class="section-title">
+                    <span class="material-icons">grade</span>
+                    精选推荐
+                </div>
+                
+                <div class="featured-knowledge">
+                    <a href="classic-detail.html" class="featured-article">
+                        <div class="featured-image" style="background-image: url('https://images.unsplash.com/photo-1576072446584-4676fb11bc59?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+                            <div class="featured-label">特别推荐</div>
+                        </div>
+                        <div class="featured-content">
+                            <h3>《黄帝内经》中的辟谷养生智慧</h3>
+                            <p>探索中医经典对食气导引的论述，了解古人智慧如何指导现代养生实践。</p>
+                            <div class="article-meta">
+                                <div class="article-author">
+                                    <img src="https://randomuser.me/api/portraits/men/54.jpg" class="avatar small">
+                                    <span>张教授</span>
+                                </div>
+                                <div class="article-stats">
+                                    <span class="material-icons">visibility</span>
+                                    5.2k
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="knowledge-sections">
+                    <div class="knowledge-section">
+                        <div class="section-header">
+                            <h3>养生经典</h3>
+                            <a href="#" class="more-link">查看全部</a>
+                        </div>
+                        
+                        <div class="classics-container">
+                            <a href="classic-detail.html" class="classic-card">
+                                <div class="classic-image">
+                                    <svg class="classic-book" viewBox="0 0 100 140" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="10" y="10" width="80" height="120" rx="2" fill="#4A638C"/>
+                                        <rect x="20" y="20" width="60" height="10" rx="1" fill="#F3E9D2"/>
+                                        <rect x="20" y="40" width="60" height="2" rx="1" fill="#F3E9D2"/>
+                                        <rect x="20" y="48" width="60" height="2" rx="1" fill="#F3E9D2"/>
+                                        <rect x="20" y="56" width="60" height="2" rx="1" fill="#F3E9D2"/>
+                                        <rect x="20" y="64" width="40" height="2" rx="1" fill="#F3E9D2"/>
+                                    </svg>
+                                </div>
+                                <div class="classic-info">
+                                    <h4>黄帝内经</h4>
+                                    <div class="classic-author">战国时期</div>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="classic-card">
+                                <div class="classic-image">
+                                    <svg class="classic-book" viewBox="0 0 100 140" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="10" y="10" width="80" height="120" rx="2" fill="#6D9788"/>
+                                        <rect x="20" y="20" width="60" height="10" rx="1" fill="#F3E9D2"/>
+                                        <rect x="20" y="40" width="60" height="2" rx="1" fill="#F3E9D2"/>
+                                        <rect x="20" y="48" width="60" height="2" rx="1" fill="#F3E9D2"/>
+                                        <rect x="20" y="56" width="60" height="2" rx="1" fill="#F3E9D2"/>
+                                        <rect x="20" y="64" width="40" height="2" rx="1" fill="#F3E9D2"/>
+                                    </svg>
+                                </div>
+                                <div class="classic-info">
+                                    <h4>道德经</h4>
+                                    <div class="classic-author">春秋时期</div>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="classic-card">
+                                <div class="classic-image">
+                                    <svg class="classic-book" viewBox="0 0 100 140" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="10" y="10" width="80" height="120" rx="2" fill="#FF6B6B"/>
+                                        <rect x="20" y="20" width="60" height="10" rx="1" fill="#F3E9D2"/>
+                                        <rect x="20" y="40" width="60" height="2" rx="1" fill="#F3E9D2"/>
+                                        <rect x="20" y="48" width="60" height="2" rx="1" fill="#F3E9D2"/>
+                                        <rect x="20" y="56" width="60" height="2" rx="1" fill="#F3E9D2"/>
+                                        <rect x="20" y="64" width="40" height="2" rx="1" fill="#F3E9D2"/>
+                                    </svg>
+                                </div>
+                                <div class="classic-info">
+                                    <h4>千金要方</h4>
+                                    <div class="classic-author">唐朝</div>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="classic-card">
+                                <div class="classic-image">
+                                    <svg class="classic-book" viewBox="0 0 100 140" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="10" y="10" width="80" height="120" rx="2" fill="#FFB347"/>
+                                        <rect x="20" y="20" width="60" height="10" rx="1" fill="#F3E9D2"/>
+                                        <rect x="20" y="40" width="60" height="2" rx="1" fill="#F3E9D2"/>
+                                        <rect x="20" y="48" width="60" height="2" rx="1" fill="#F3E9D2"/>
+                                        <rect x="20" y="56" width="60" height="2" rx="1" fill="#F3E9D2"/>
+                                        <rect x="20" y="64" width="40" height="2" rx="1" fill="#F3E9D2"/>
+                                    </svg>
+                                </div>
+                                <div class="classic-info">
+                                    <h4>养生论</h4>
+                                    <div class="classic-author">魏晋时期</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="knowledge-section">
+                        <div class="section-header">
+                            <h3>现代研究</h3>
+                            <a href="#" class="more-link">查看全部</a>
+                        </div>
+                        
+                        <a href="#" class="research-card">
+                            <div class="research-preview">
+                                <div class="research-image" style="background-image: url('https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                                <div class="research-type">临床研究</div>
+                            </div>
+                            <div class="research-content">
+                                <h4>断食对细胞自噬的影响研究</h4>
+                                <div class="research-desc">探讨16-48小时断食如何促进细胞自噬过程，及其对健康的潜在益处。</div>
+                                <div class="research-meta">
+                                    <div>发表于2022年</div>
+                                    <div>样本量：120人</div>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="research-card">
+                            <div class="research-preview">
+                                <div class="research-image" style="background-image: url('https://images.unsplash.com/photo-1530026186672-2cd00ffc50fe?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                                <div class="research-type">综述</div>
+                            </div>
+                            <div class="research-content">
+                                <h4>中医辟谷疗法的现代研究综述</h4>
+                                <div class="research-desc">汇总近10年来中医辟谷在慢性疾病调理中的应用及现代科学解释。</div>
+                                <div class="research-meta">
+                                    <div>发表于2023年</div>
+                                    <div>引用数：78</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="knowledge-section">
+                        <div class="section-header">
+                            <h3>实用指南</h3>
+                            <a href="#" class="more-link">查看全部</a>
+                        </div>
+                        
+                        <div class="guides-container">
+                            <a href="#" class="guide-card">
+                                <div class="guide-icon">
+                                    <span class="material-icons">assignment</span>
+                                </div>
+                                <div class="guide-info">
+                                    <h4>辟谷新手21天完全指南</h4>
+                                    <div class="guide-meta">
+                                        <span class="material-icons">visibility</span>
+                                        3.2k阅读
+                                    </div>
+                                </div>
+                                <span class="guide-arrow material-icons">chevron_right</span>
+                            </a>
+                            
+                            <a href="#" class="guide-card">
+                                <div class="guide-icon">
+                                    <span class="material-icons">restaurant</span>
+                                </div>
+                                <div class="guide-info">
+                                    <h4>科学复食方案大全</h4>
+                                    <div class="guide-meta">
+                                        <span class="material-icons">visibility</span>
+                                        2.8k阅读
+                                    </div>
+                                </div>
+                                <span class="guide-arrow material-icons">chevron_right</span>
+                            </a>
+                            
+                            <a href="#" class="guide-card">
+                                <div class="guide-icon">
+                                    <span class="material-icons">warning</span>
+                                </div>
+                                <div class="guide-info">
+                                    <h4>辟谷期间常见问题与解决方案</h4>
+                                    <div class="guide-meta">
+                                        <span class="material-icons">visibility</span>
+                                        4.5k阅读
+                                    </div>
+                                </div>
+                                <span class="guide-arrow material-icons">chevron_right</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-bar">
+                <a href="home.html" class="nav-item">
+                    <span class="material-icons nav-icon">home</span>
+                    <span>首页</span>
+                </a>
+                <a href="tools.html" class="nav-item">
+                    <span class="material-icons nav-icon">hardware</span>
+                    <span>养生工具</span>
+                </a>
+                <a href="products.html" class="nav-item">
+                    <span class="material-icons nav-icon">shopping_bag</span>
+                    <span>辟谷产品</span>
+                </a>
+                <a href="community.html" class="nav-item">
+                    <span class="material-icons nav-icon">forum</span>
+                    <span>社区</span>
+                </a>
+                <a href="knowledge.html" class="nav-item active">
+                    <span class="material-icons nav-icon">menu_book</span>
+                    <span>知识库</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
+
